@@ -9,13 +9,17 @@ html
                     span#typewriter-text software.
                 .button-box
                     .button
-                        .text Download
-                        .icon
-                            img(src="graphics/icon/download.png", alt="")
+                        .content
+                            .text
+                                p Download
+                            .icon
+                                img(src="graphics/icon/download.png", alt="")
                     .button
-                        .text Request yours
-                        .icon
-                            img(src="graphics/icon/question.png", alt="")
+                        .content
+                            .text
+                                p Request yours
+                            .icon
+                                img(src="graphics/icon/question.png", alt="")
         .section
             .title-box
                 .title About me
@@ -93,7 +97,96 @@ html
         .section
             .title-box
                 .title Projects
-
-    
+            .text-box.projects
+                .project.item
+                    img(src="graphics/icon/secured-network.png", alt="").icon
+                    .gradient
+                    .menu
+                        p.name SecuredNetwork
+                        .button-box
+                            .button
+                                .content
+                                    .text
+                                        p Project page
+                                    .icon
+                                        img(src="graphics/icon/foreign.png", alt="")
+                            .button
+                                .content
+                                    .text
+                                        p Documentation
+                                    .icon
+                                        img(src="graphics/icon/open-book.png", alt="")
+                            .button
+                                .content
+                                    .text
+                                        p Download
+                                    .icon
+                                        img(src="graphics/icon/download.png", alt="")
+                .project.item
+                    img(src="graphics/icon/clicks-per-second.png", alt="").icon
+                    .gradient
+                    .menu
+                        p.name ClicksPerSecond
+                        .button-box
+                            .button
+                                .content
+                                    .text
+                                        p Project page
+                                    .icon
+                                        img(src="graphics/icon/foreign.png", alt="")
+                            .button
+                                .content
+                                    .text
+                                        p Documentation
+                                    .icon
+                                        img(src="graphics/icon/open-book.png", alt="")
+                            .button
+                                .content
+                                    .text
+                                        p Download
+                                    .icon
+                                        img(src="graphics/icon/download.png", alt="")
+                
+                .project.item
+                    img(src="graphics/icon/repair-item.png", alt="").icon
+                    .gradient
+                    .menu
+                        p.name RepairItem
+                        .button-box
+                            .button
+                                .content
+                                    .text
+                                        p Project page
+                                    .icon
+                                        img(src="graphics/icon/foreign.png", alt="")
+                            .button
+                                .content
+                                    .text
+                                        p Documentation
+                                    .icon
+                                        img(src="graphics/icon/open-book.png", alt="")
+                            .button
+                                .content
+                                    .text
+                                        p Download
+                                    .icon
+                                        img(src="graphics/icon/download.png", alt="")
+        .section.statistics
+            .title-box
+                .title Statistics
+            .text-box.statistics
+                .statistic
+                    p.name Plugin downloads:
+                        a.value 0
+                        a.to-value= plugin_downloads
+                .statistic
+                    p.name Projects:
+                        a.value 0
+                        a.to-value= projects
+                .statistic
+                    p.name Average stars in reviews:
+                        a.value 0
+                        a.to-value= average_stars
     script(src="script/home/typewriter.js")
-    script(src="script/home/scroll-effect.js" type="module")
+    script(src="script/home/scroll-reveal.js", type="module")
+    script(src="script/home/animations.js" type="module")

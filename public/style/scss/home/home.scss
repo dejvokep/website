@@ -18,43 +18,54 @@ div.banner {
             font-size: 100px;
             line-height: 120px;
 
-            span#typewriter-text::after {
-                content: "";
-                height: 110px;
-                width: 10px;
-                margin: 5 5px;
-                background-color: black;
-                display: inline-block;
-                vertical-align: middle;
-                animation: 1s cursor-blinking infinite;
+            span#typewriter-text {
+                color: purple;
+
+                &::after {
+                    content: "";
+                    height: 110px;
+                    width: 10px;
+                    margin: 5 5px;
+                    background-color: black;
+                    display: inline-block;
+                    vertical-align: middle;
+                    animation: 1s cursor-blinking infinite;
+                }
             }
         }
 
         div.button-box {
             display: inline-flex;
+        }
+    }
+}
 
-            div.button {
-                display: inline-flex;
-                background-color: white;
-                padding: 10px 20px;
-                margin: 0 20px 0 0;
-                font-family: 'Open Sans';
-                font-size: 15px;
-                border: 0px solid black;
-                border-radius: 10px;
+div.button {
+    background-color: white;
+    padding: 10px 20px;
+    margin: 0 20px 0 0;
+    font-family: 'Open Sans';
+    font-size: 15px;
+    border: 0px solid black;
+    border-radius: 10px;
 
-                .text {
-                    padding: 0 5px;
-                }
+    div.content {
+        margin: 0 auto;
+        display: inline-flex;
+        div.text {
+            padding: 0 5px;
 
-                .icon {
-                    padding: 0 5px;
-                    height: 100%;
+            p {
+                margin: 0;
+            }
+        }
 
-                    img {
-                        width: 20px;
-                    }
-                }
+        div.icon {
+            padding: 0 5px;
+            height: 100%;
+
+            img {
+                width: 20px;
             }
         }
     }
@@ -89,22 +100,29 @@ div.section {
 
     div.text-box {
         width: 100%;
-        &.about {
-            display: inline-flex;
-            flex-wrap: nowrap;
-            flex-direction: row;
-            justify-content: space-between;
+        margin-top: 40px;
+        display: inline-flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
 
+        div.item {
+            margin: 40px 5%;
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+
+        &.about {
             div.item {
-                margin: 0 5%;
-                flex-grow: 1;
-                flex-basis: 0;
+                flex-basis: 310px;
             }
+
             div.about-text {
                 font-family: "Roboto Slab";
                 font-weight: 300;
                 text-align: justify;
             }
+
             div.experience-box {
                 div.experience {
                     div.description {
@@ -119,6 +137,7 @@ div.section {
                             }
                         }
                     }
+
                     div.bar {
                         height: 5px;
                         width: 100%;
@@ -134,7 +153,106 @@ div.section {
                 }
             }
         }
+
+        &.projects {
+            div.project {
+                position: relative;
+                height: 300px;
+                flex-grow: 0;
+                flex-basis: 300px;
+                background-color: transparent;
+                //border: 1px solid black;
+
+                img.icon {
+                    position: absolute;
+                    height: 250px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: height 1s;
+                }
+
+                div.gradient {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    transition: 1s;
+                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+                    background-size: 100% 200%;
+                    background-position: 0% 0%;
+                }
+
+                div.menu {
+                    position: absolute;
+                    transition: 1s;
+                    bottom: 0;
+                    width: 100%;
+                    overflow: hidden;
+                    height: 80px;
+                    text-align: center;
+
+                    p.name {
+                        font-family: 'Inter';
+                        font-size: 30px;
+                        color: white;
+                    }
+
+                    div.button-box {
+                        div.button {
+                            width: 200px;
+                            margin: 3px auto;
+                        }
+                    }
+                }
+
+                &:hover {
+                    img.icon {
+                        height: 280px;
+                    }
+
+                    div.gradient {
+                        background-position: 0% 100%;
+                    }
+
+                    div.menu {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        &.statistics {
+            display: block;
+            
+            div.statistic {
+                width: 100%;
+                p.name {
+                    font-family: 'Roboto Slab';
+                    font-size: 30px;
+                    width: 100%;
+
+                    a.value {
+                        font-family: 'Roboto Slab';
+                        font-family: 'Inter';
+                        color: purple;
+                        float: right;
+                    }
+
+                    a.to-value {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
+}
+
+div.section.statistics {
+    width: 50%;
+    padding-right: 25%;
+    padding-left: 25%;
 }
 
 div.section:nth-child(odd) {
@@ -142,9 +260,12 @@ div.section:nth-child(odd) {
 }
 
 @keyframes cursor-blinking {
-    from, to {
+
+    from,
+    to {
         opacity: 100%;
     }
+
     50% {
         opacity: 0%;
     }
