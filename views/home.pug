@@ -3,24 +3,27 @@ html
         link(rel="stylesheet", href="style/css/global.css")
         link(rel="stylesheet", href="style/css/home/home.css")
     body
-        .banner
+        .banner(id="top")
             .container
-                .title Take the road to cool 
-                    span#typewriter-text software.
+                .title
+                    p Take the road to cool 
+                        span#typewriter-text software.
                 .button-box
-                    .button
-                        .content
-                            .text
-                                p Download
-                            .icon
-                                img(src="graphics/icon/download.png", alt="")
-                    .button
-                        .content
-                            .text
-                                p Request yours
-                            .icon
-                                img(src="graphics/icon/question.png", alt="")
-        .section
+                    a.clickable(href="#projects")
+                        .button
+                            .content
+                                .text
+                                    p Download
+                                .icon
+                                    img(src="graphics/icon/download.png", alt="")
+                    a.clickable(href="https://discord.gg/BbhADEy" target="_blank")
+                        .button
+                            .content
+                                .text
+                                    p Request yours
+                                .icon
+                                    img(src="graphics/icon/question.png", alt="")
+        .section(id="about-me")
             .title-box
                 .title About me
             .text-box.about
@@ -94,7 +97,7 @@ html
                                 a.time 2 years
                         .bar
                             .fill
-        .section
+        .section(id="projects")
             .title-box
                 .title Projects
             .text-box.projects
@@ -104,74 +107,82 @@ html
                     .menu
                         p.name SecuredNetwork
                         .button-box
-                            .button
-                                .content
-                                    .text
-                                        p Project page
-                                    .icon
-                                        img(src="graphics/icon/foreign.png", alt="")
-                            .button
-                                .content
-                                    .text
-                                        p Documentation
-                                    .icon
-                                        img(src="graphics/icon/open-book.png", alt="")
-                            .button
-                                .content
-                                    .text
-                                        p Download
-                                    .icon
-                                        img(src="graphics/icon/download.png", alt="")
+                            a.clickable(href=securednetwork.page target="_blank")
+                                .button
+                                    .content
+                                        .text
+                                            p Project page
+                                        .icon
+                                            img(src="graphics/icon/foreign.png", alt="")
+                            a.clickable(href=securednetwork.docs target="_blank")
+                                .button
+                                    .content
+                                        .text
+                                            p Documentation
+                                        .icon
+                                            img(src="graphics/icon/open-book.png", alt="")
+                            a.clickable(href=securednetwork.download target="_blank")
+                                .button
+                                    .content
+                                        .text
+                                            p Download
+                                        .icon
+                                            img(src="graphics/icon/download.png", alt="")
                 .project.item
                     img(src="graphics/icon/clicks-per-second.png", alt="").icon
                     .gradient
                     .menu
                         p.name ClicksPerSecond
                         .button-box
-                            .button
-                                .content
-                                    .text
-                                        p Project page
-                                    .icon
-                                        img(src="graphics/icon/foreign.png", alt="")
-                            .button
-                                .content
-                                    .text
-                                        p Documentation
-                                    .icon
-                                        img(src="graphics/icon/open-book.png", alt="")
-                            .button
-                                .content
-                                    .text
-                                        p Download
-                                    .icon
-                                        img(src="graphics/icon/download.png", alt="")
-                
+                            a.clickable(href=clickspersecond.page target="_blank")
+                                .button
+                                    .content
+                                        .text
+                                            p Project page
+                                        .icon
+                                            img(src="graphics/icon/foreign.png", alt="")
+                            a.clickable(href=clickspersecond.docs target="_blank")
+                                .button
+                                    .content
+                                        .text
+                                            p Documentation
+                                        .icon
+                                            img(src="graphics/icon/open-book.png", alt="")
+                            a.clickable(href=clickspersecond.download target="_blank")
+                                .button
+                                    .content
+                                        .text
+                                            p Download
+                                        .icon
+                                            img(src="graphics/icon/download.png", alt="")
                 .project.item
                     img(src="graphics/icon/repair-item.png", alt="").icon
                     .gradient
                     .menu
                         p.name RepairItem
                         .button-box
-                            .button
-                                .content
-                                    .text
-                                        p Project page
-                                    .icon
-                                        img(src="graphics/icon/foreign.png", alt="")
-                            .button
-                                .content
-                                    .text
-                                        p Documentation
-                                    .icon
-                                        img(src="graphics/icon/open-book.png", alt="")
-                            .button
-                                .content
-                                    .text
-                                        p Download
-                                    .icon
-                                        img(src="graphics/icon/download.png", alt="")
-        .section.statistics
+                            a.clickable(href=repairitem.page target="_blank")
+                                .button
+                                    .content
+                                        .text
+                                            p Project page
+                                        .icon
+                                            img(src="graphics/icon/foreign.png", alt="")
+                            a.clickable(href=repairitem.docs target="_blank")
+                                .button
+                                    .content
+                                        .text
+                                            p Documentation
+                                        .icon
+                                            img(src="graphics/icon/open-book.png", alt="")
+                            a.clickable(href=repairitem.download target="_blank")
+                                .button
+                                    .content
+                                        .text
+                                            p Download
+                                        .icon
+                                            img(src="graphics/icon/download.png", alt="")
+        .section.statistics(id="statistics")
             .title-box
                 .title Statistics
             .text-box.statistics

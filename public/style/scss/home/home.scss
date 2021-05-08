@@ -9,27 +9,31 @@ div.banner {
     div.container {
         position: relative;
         left: 10%;
-        width: 40%;
+        width: 90%;
         top: 40%;
         transform: translateY(-50%);
 
         div.title {
+            width: 40%;
             font-family: 'Inter';
             font-size: 100px;
             line-height: 120px;
 
-            span#typewriter-text {
-                color: purple;
+            p {
+                margin-bottom: 30px;
+                span#typewriter-text {
+                    color: purple;
 
-                &::after {
-                    content: "";
-                    height: 110px;
-                    width: 10px;
-                    margin: 5 5px;
-                    background-color: black;
-                    display: inline-block;
-                    vertical-align: middle;
-                    animation: 1s cursor-blinking infinite;
+                    &::after {
+                        content: "";
+                        height: 110px;
+                        width: 10px;
+                        margin: 5 5px;
+                        background-color: black;
+                        display: inline-block;
+                        vertical-align: middle;
+                        animation: 1s cursor-blinking infinite;
+                    }
                 }
             }
         }
@@ -52,6 +56,7 @@ div.button {
     div.content {
         margin: 0 auto;
         display: inline-flex;
+
         div.text {
             padding: 0 5px;
 
@@ -87,13 +92,15 @@ div.section {
             font-size: 50px;
             text-transform: uppercase;
 
-            &::after {
-                content: "";
-                width: 10%;
-                height: 0.5px;
-                margin: 20px 45%;
-                display: block;
-                background-color: lightgrey;
+            p {
+                &::after {
+                    content: "";
+                    width: 10%;
+                    height: 0.5px;
+                    margin: 20px 45%;
+                    display: block;
+                    background-color: lightgrey;
+                }
             }
         }
     }
@@ -225,9 +232,10 @@ div.section {
 
         &.statistics {
             display: block;
-            
+
             div.statistic {
                 width: 100%;
+
                 p.name {
                     font-family: 'Roboto Slab';
                     font-size: 30px;

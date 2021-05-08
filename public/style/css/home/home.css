@@ -8,19 +8,23 @@ div.banner {
 div.banner div.container {
   position: relative;
   left: 10%;
-  width: 40%;
+  width: 90%;
   top: 40%;
   transform: translateY(-50%);
 }
 div.banner div.container div.title {
+  width: 40%;
   font-family: "Inter";
   font-size: 100px;
   line-height: 120px;
 }
-div.banner div.container div.title span#typewriter-text {
+div.banner div.container div.title p {
+  margin-bottom: 30px;
+}
+div.banner div.container div.title p span#typewriter-text {
   color: purple;
 }
-div.banner div.container div.title span#typewriter-text::after {
+div.banner div.container div.title p span#typewriter-text::after {
   content: "";
   height: 110px;
   width: 10px;
@@ -76,7 +80,7 @@ div.section div.title-box div.title {
   font-size: 50px;
   text-transform: uppercase;
 }
-div.section div.title-box div.title::after {
+div.section div.title-box div.title p::after {
   content: "";
   width: 10%;
   height: 0.5px;
