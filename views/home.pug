@@ -2,7 +2,27 @@ html
     head
         link(rel="stylesheet", href="style/css/global.css")
         link(rel="stylesheet", href="style/css/home/home.css")
+        title Dejvokep.com
     body
+        header
+            .menu#menu
+                .web-title
+                    .logo
+                    .title
+                        h1 DEJVOKEP
+                .options
+                    a.clickable(href="#top")
+                        .option
+                            p Home
+                    a.clickable(href="#about-me")
+                        .option
+                            p About
+                    a.clickable(href="#projects")
+                        .option
+                            p Projects
+                    a.clickable(href="#statistics")
+                        .option
+                            p Statistics
         .banner(id="top")
             .container
                 .title
@@ -10,26 +30,44 @@ html
                         span#typewriter-text software.
                 .button-box
                     a.clickable(href="#projects")
-                        .button
+                        .button.button-hover
                             .content
                                 .text
                                     p Download
                                 .icon
                                     img(src="graphics/icon/download.png", alt="")
                     a.clickable(href="https://discord.gg/BbhADEy" target="_blank")
-                        .button
+                        .button.button-hover
                             .content
                                 .text
                                     p Request yours
                                 .icon
                                     img(src="graphics/icon/question.png", alt="")
+            .location
+                .icon
+                    img(src="graphics/icon/pin.png", alt="")
+                .text
+                    p D1 motorway, Poprad, Slovakia
+            a.clickable(href="#about-me")
+                .scroll.button-hover
+                    .icon-right.icon
+                        img(src="graphics/icon/arrow-down.png", alt="")
+                    .icon-left.icon
+                        img(src="graphics/icon/arrow-down.png", alt="")
+                    .text
+                        p Scroll down for more
+        
+        #back-to-top.invisible-back-to-top
+            a.clickable(href="#top")
+                .icon
+                    img(src="graphics/icon/arrow-back-to-top.png", alt="")
         .section(id="about-me")
             .title-box
                 .title About me
             .text-box.about
                 .about-text.item
                     h1 Nice to meet You,
-                    p My name is davidcubesvk and I am an independent developer with over 3 years of coding experience.
+                    p My name is dejvokep (formerly known as davidcubesvk) and I am an independent developer with over 3 years of coding experience.
                     p I mostly program plugins for game servers based on Spigot platform, also Discord bots with wide range of uses. Most of my projects are public, but I also take personal requests.
                     p In free time, besides programming, I enjoy watching movies, playing games with my friends and cycling.
                     p I am also very conscientous, take things seriously and when I start with something, I never give up and mostly take it all the way to the end, although, it's not always that easy.
@@ -108,21 +146,21 @@ html
                         p.name SecuredNetwork
                         .button-box
                             a.clickable(href=securednetwork.page target="_blank")
-                                .button
+                                .button.button-hover
                                     .content
                                         .text
                                             p Project page
                                         .icon
                                             img(src="graphics/icon/foreign.png", alt="")
                             a.clickable(href=securednetwork.docs target="_blank")
-                                .button
+                                .button.button-hover
                                     .content
                                         .text
                                             p Documentation
                                         .icon
                                             img(src="graphics/icon/open-book.png", alt="")
                             a.clickable(href=securednetwork.download target="_blank")
-                                .button
+                                .button.button-hover
                                     .content
                                         .text
                                             p Download
@@ -135,21 +173,21 @@ html
                         p.name ClicksPerSecond
                         .button-box
                             a.clickable(href=clickspersecond.page target="_blank")
-                                .button
+                                .button.button-hover
                                     .content
                                         .text
                                             p Project page
                                         .icon
                                             img(src="graphics/icon/foreign.png", alt="")
                             a.clickable(href=clickspersecond.docs target="_blank")
-                                .button
+                                .button.button-hover
                                     .content
                                         .text
                                             p Documentation
                                         .icon
                                             img(src="graphics/icon/open-book.png", alt="")
                             a.clickable(href=clickspersecond.download target="_blank")
-                                .button
+                                .button.button-hover
                                     .content
                                         .text
                                             p Download
@@ -162,21 +200,21 @@ html
                         p.name RepairItem
                         .button-box
                             a.clickable(href=repairitem.page target="_blank")
-                                .button
+                                .button.button-hover
                                     .content
                                         .text
                                             p Project page
                                         .icon
                                             img(src="graphics/icon/foreign.png", alt="")
                             a.clickable(href=repairitem.docs target="_blank")
-                                .button
+                                .button.button-hover
                                     .content
                                         .text
                                             p Documentation
                                         .icon
                                             img(src="graphics/icon/open-book.png", alt="")
                             a.clickable(href=repairitem.download target="_blank")
-                                .button
+                                .button.button-hover
                                     .content
                                         .text
                                             p Download
