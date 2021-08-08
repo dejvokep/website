@@ -367,6 +367,36 @@ div.section:nth-child(odd) {
   background-color: #f2f2f2;
 }
 
+.footer {
+  background-color: #f2f2f2;
+  color: black;
+  padding: 30px 150px;
+  margin-top: 200px;
+}
+.footer div.web-title {
+  height: 54px;
+  display: inline-block;
+}
+.footer div.web-title div.title {
+  line-height: 54px;
+}
+.footer div.web-title div.title h1 {
+  font-weight: 900;
+  font-family: "Inter";
+  text-transform: uppercase;
+  font-style: italic;
+  margin: 0;
+}
+.footer div.text {
+  float: right;
+}
+.footer div.text p {
+  margin: 0;
+  font-family: "Roboto Slab";
+  font-size: 15px;
+  line-height: 54px;
+}
+
 @keyframes cursor-blinking {
   from, to {
     opacity: 100%;
