@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidcubesvk/website.git"
+    "url": "git+https://github.com/dejvokep/website.git"
   },
-  "author": "davidcubesvk",
+  "author": "dejvokep",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/davidcubesvk/website/issues"
+    "url": "https://github.com/dejvokep/website/issues"
   },
-  "homepage": "https://github.com/davidcubesvk/website#readme",
+  "homepage": "https://github.com/dejvokep/website#readme",
   "dependencies": {
     "express": "^4.17.1",
     "pug": "^3.0.2"
