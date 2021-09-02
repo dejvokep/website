@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Open+Sans:wght@300;400;600&family=Roboto+Slab:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&family=Open+Sans:wght@300;400;600&family=Roboto+Slab:wght@100;200;300;400;500&display=swap');
+$primary-font-family: 'Inter';
 
 header {
     div.menu {
@@ -12,6 +13,7 @@ header {
         margin: 50px 50px;
         display: block;
         transition: 0.2s;
+        color: white;
 
         div.web-title {
             float: left;
@@ -21,8 +23,8 @@ header {
                 line-height: 54px;
 
                 h1 {
-                    font-weight: 900;
                     font-family: 'Inter';
+                    font-weight: 900;
                     text-transform: uppercase;
                     font-style: italic;
                     margin: 0;
@@ -32,18 +34,20 @@ header {
 
         div.options {
             float: right;
+            color: white;
+            height: 54px;
 
-            div.option {
+            a.option {
                 display: inline-block;
-                margin: 0 20px;
-                height: 54px;
-
-                p {
-                    position: relative;
-                    font-family: 'Roboto Slab';
-                    padding: 0 10px;
-                    margin: 5px 0;
-                    line-height: 44px;
+                margin: 5px 20px;
+                position: relative;
+                font-family: 'Inter';
+                text-transform: uppercase;
+                font-weight: 500;
+                color: white;
+                font-size: 15px;
+                line-height: 44px;
+                    
 
                     &::after {
                         height: 2px;
@@ -51,7 +55,7 @@ header {
                         width: 0%;
                         left: 0;
                         bottom: 0;
-                        background-color: purple;
+                        background-color: #ff3f81;
                         content: "";
                         transition: 0.5s;
                     }
@@ -62,7 +66,14 @@ header {
                             width: 100%;
                         }
                     }
-                }
+            }
+
+            a.active::after {
+                /*background-color: #ff3f81;
+                border: solid #ff3f81;
+                border-radius: 20px;*/
+
+                        width: 100%;
             }
         }
     }
@@ -72,6 +83,13 @@ header {
         background-color: white;
         opacity: 0.95;
         box-shadow: 5px 10px 70px grey;
+        color: black;
+
+        div.options {
+            a.option {
+                color: black;
+            }
+        }
     }
 }
 
@@ -99,38 +117,60 @@ div#back-to-top {
 div.banner {
     width: 100%;
     height: 100%;
-    background-image: url("../../../graphics/image/home/background.png");
-    background-position: center;
+    //background-image: url("../../../graphics/image/home/background.png");
+    //background-position: center;
 
     div.container {
-        position: relative;
+        position: absolute;
         left: 10%;
-        width: 90%;
         top: 40%;
         transform: translateY(-50%);
+        padding: 15px;
 
         div.title {
-            width: 40%;
-            min-width: 500px;
+            //width: 40%;
+            //min-width: 500px;
             font-family: 'Inter';
+            font-weight: 700;
             font-size: 100px;
             line-height: 120px;
+            padding-bottom: 30px;
 
             p {
-                margin-bottom: 30px;
+                color: white;
+                margin: 0;
+                white-space: pre;
 
-                span#typewriter-text {
-                    color: purple;
+                span#typewriter-box {
+                    background-color: white;
+                    overflow: hidden;
+                    display: inline-block;
+                    vertical-align: bottom;
+                    animation: all .5s;
+                    transition: all .5s;
 
-                    &::after {
-                        content: "";
-                        height: 110px;
-                        width: 10px;
-                        margin: 5 5px;
-                        background-color: black;
-                        display: inline-block;
-                        vertical-align: middle;
-                        animation: 1s cursor-blinking infinite;
+                    span#typewriter-text {
+                        color: purple;
+                        padding: 0 10px;
+                        white-space: pre;
+                        animation: all .5s;
+                        transition: all .5s;
+                        max-width: 100vh;
+
+                        /*&::after {
+                            content: "";
+                            height: 100px;
+                            width: 10px;
+                            margin: 5 5px;
+                            background-color: black;
+                            display: inline-block;
+                            vertical-align: sub;
+                            animation: 1s cursor-blinking infinite;
+                        }*/
+                    }
+
+                    span.invisible {
+                        opacity: 0;
                     }
                 }
             }
@@ -220,67 +260,125 @@ div.banner {
 }
 
 div.button {
+    display: inline-block;
     background-color: white;
-    padding: 10px 20px;
     margin: 0 20px 0 0;
-    font-family: 'Roboto Slab';
-    font-size: 15px;
-    border: 0px solid black;
-    border-radius: 10px;
+    a {
+        display: block;
+        background-color: transparent;
+        position: relative;
+        padding: 10px 20px;
+        font-family: 'Inter';
+        font-size: 15px;
+        line-height: 16px;
+        z-index: 1;
+        transition: all .5s;
 
-    div.content {
-        margin: 0 auto;
-        display: inline-flex;
+        &::after {
+            position: absolute;
+            content: "";
+            z-index: -1;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0%;
+            background-color: purple;
+            transition: all .5s;
+        }
 
-        div.text {
-            padding: 0 5px;
-
-            p {
-                margin: 0;
+        span.icon {
+            display: inline-block;
+            padding-left: 10px;
+            img {
+                vertical-align: middle;
+                height: 16px;
             }
         }
 
-        div.icon {
-            padding: 0 5px;
-            height: 100%;
+        &:hover {
+            color: white;
 
-            img {
-                width: 20px;
+            &::after {
+                width: 100%;
             }
         }
     }
 }
 
-div.button-hover {
+/*div.button-hover {
     box-shadow: none;
     transition: 0.2s;
     background-color: white;
 
     &:hover {
         box-shadow: 5px 10px 50px grey;
-        background-color: purple;
         color: white;
+
+        div.background {
+            width: 100%;
+        }
     }
+}*/
+
+div#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
 }
 
 div.section {
-    width: 70%;
-    background-color: white;
-    padding: 75px 15%;
-    font-family: 'Roboto Slab';
+    font-family: 'Inter';
     font-weight: 300;
     text-align: justify;
     font-size: 15px;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    width: 70%;
+    padding: 100px 15%;
+
+    div.wave-divider {
+        //position: absolute;
+        //top: 0;
+        //left: 0; 
+        width: calc(100% + 1.3px);
+        height: 100px;
+        overflow: hidden;
+        line-height: 0;
+
+        svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+        }
+        
+        &.dark {
+            background: url("../../../graphics/image/home/waves (7).svg") repeat;
+            .shape-fill {
+                fill: #23153C;
+            }
+        }
+
+        &.light {
+            background: url("../../../graphics/image/home/waves (6).svg") repeat;
+            .shape-fill {
+                fill: #ffffff;
+            }
+        }
+    }
 
     div.title-box {
-        div.title {
+        h1.title {
+            margin: 0;
             text-align: center;
-            font-family: 'Roboto Slab';
+            font-family: 'Inter';
             font-size: 50px;
             text-transform: uppercase;
-
-            p {
+            position: relative;
                 &::after {
+                    position: absolute;
                     content: "";
                     width: 10%;
                     height: 0.5px;
@@ -288,13 +386,12 @@ div.section {
                     display: block;
                     background-color: lightgrey;
                 }
-            }
         }
     }
 
     div.text-box {
         width: 100%;
-        margin-top: 40px;
+        padding-top: 40px;
         display: inline-flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -312,7 +409,7 @@ div.section {
             }
 
             div.about-text {
-                font-family: "Roboto Slab";
+                font-family: "Inter";
                 font-weight: 300;
                 text-align: justify;
             }
@@ -395,8 +492,15 @@ div.section {
 
                     div.button-box {
                         div.button {
+                            a {
+                                color: black;
+                            }
+                            a:hover {
+                                color: white;
+                            }
+
                             width: 200px;
-                            margin: 3px auto;
+                            margin: 10px auto;
                         }
                     }
                 }
@@ -418,25 +522,135 @@ div.section {
         }
 
         &.statistics {
+            width: 50%;
+            margin-right: 25%;
+            margin-left: 25%;
+            margin-top: 100px;
+            
             display: block;
-
             div.statistic {
                 width: 100%;
-
                 p.name {
-                    font-family: 'Roboto Slab';
+                    font-family: 'Inter';
                     font-size: 30px;
                     width: 100%;
-
                     a.value {
-                        font-family: 'Roboto Slab';
                         font-family: 'Inter';
+                        font-weight: 700;
                         color: purple;
                         float: right;
                     }
-
                     a.to-value {
                         display: none;
+                    }
+                }
+            }
+        }
+
+        &.services {
+            
+            
+                div.service {
+                    position: relative;
+                    flex-grow: 0;
+                    flex-basis: 400px;
+                    background-color: white;
+                    box-shadow: 5px 10px 70px grey;
+                    margin: 90px 5%;
+
+                    img.icon {
+                        position: absolute;
+                        top: -50px;
+                        left: 150px;
+                        width: 100px;
+                        transition: all .5s;
+                    }
+
+                    div.description {
+                        padding-top: 50px;
+
+                        p.category {
+                            text-align: center;
+                            font-weight: 700;
+                            font-size: 20px;
+                        }
+
+                        p.description {
+                            padding: 0 40px;
+                            line-height: 22px;
+                        }
+                    }
+
+                    &.service:hover {
+                        img.icon {
+                            position: absolute;
+                            top: -60px;
+                            left: 140px;
+                            width: 120px;
+                        }
+                    }
+                }
+        }
+
+        &.contacts {
+            display: block;
+            width: 50%;
+            padding-right: 25%;
+            padding-left: 25%;
+            margin-top: 100px;
+
+            div.contact {
+                width: 100%;
+                height: 60px;
+                padding: 10px;
+                border: 3px solid white;
+                background-color: white;
+                box-shadow: 5px 10px 20px grey;
+                transition: all .5s;
+                margin: 30px 0;
+                position: relative;
+
+                div.icon {
+                    display: grid;
+                    place-items: center;
+                    height: 60px;
+                    width: 60px;
+                    padding-right: 35px;
+                    img {
+                        width: 50px;
+                        padding: 0 5px;
+                        transition: all .5s;
+                    }
+                }
+
+                div.description {
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    margin-left: 105px;
+                    height: 60px;
+                    vertical-align: bottom;
+                    display: inline-block;
+
+                    p.name {
+                        font-weight: 700;
+                        margin: 0;
+                        line-height: 30px;
+                    }
+
+                    a.link {
+                        line-height: 30px;
+                    }
+                }
+
+                &:hover {
+                    border: 3px solid purple;
+
+                    div.icon {
+                        img {
+                            width: 54px;
+                            padding: 0 3px;
+                        }
                     }
                 }
             }
@@ -444,21 +658,33 @@ div.section {
     }
 }
 
-div.section.statistics {
-    width: 50%;
-    padding-right: 25%;
-    padding-left: 25%;
+div.section.dark {
+    padding: 100px 0;
+    margin: 100px 15%;
+    background-color: white;//#23153c;
+    //box-shadow: 5px 10px 70px #f2f2f3;
+
+    div.title-box, div.text-box {
+        background-color: white;
+    }
+
+    h1, p, a, span {
+        color: black;
+    }
 }
 
-div.section:nth-child(odd) {
-    background-color: #f2f2f2;
+div.section:last-of-type {
+    padding-bottom: 200px;
 }
 
+footer {
+    z-index: 100;
+}
 .footer {
     background-color: #f2f2f2;
     color: black;
     padding: 30px 150px;
-    margin-top: 200px;
+    z-index: 100;
 
     div.web-title {
         height: 54px;
@@ -481,7 +707,7 @@ div.section:nth-child(odd) {
         float: right;
         p {
             margin: 0;
-            font-family: 'Roboto Slab';
+            font-family: 'Inter';
             font-size: 15px;
             line-height: 54px;
         }

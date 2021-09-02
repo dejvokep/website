@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Open+Sans:wght@300;400;600&family=Roboto+Slab:wght@100;200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&family=Open+Sans:wght@300;400;600&family=Roboto+Slab:wght@100;200;300;400;500&display=swap");
 header div.menu {
   box-shadow: none;
   z-index: 10000;
@@ -10,6 +10,7 @@ header div.menu {
   margin: 50px 50px;
   display: block;
   transition: 0.2s;
+  color: white;
 }
 header div.menu div.web-title {
   float: left;
@@ -19,38 +20,45 @@ header div.menu div.web-title div.title {
   line-height: 54px;
 }
 header div.menu div.web-title div.title h1 {
-  font-weight: 900;
   font-family: "Inter";
+  font-weight: 900;
   text-transform: uppercase;
   font-style: italic;
   margin: 0;
 }
 header div.menu div.options {
   float: right;
-}
-header div.menu div.options div.option {
-  display: inline-block;
-  margin: 0 20px;
+  color: white;
   height: 54px;
 }
-header div.menu div.options div.option p {
+header div.menu div.options a.option {
+  display: inline-block;
+  margin: 5px 20px;
   position: relative;
-  font-family: "Roboto Slab";
-  padding: 0 10px;
-  margin: 5px 0;
+  font-family: "Inter";
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  font-size: 15px;
   line-height: 44px;
 }
-header div.menu div.options div.option p::after {
+header div.menu div.options a.option::after {
   height: 2px;
   position: absolute;
   width: 0%;
   left: 0;
   bottom: 0;
-  background-color: purple;
+  background-color: #ff3f81;
   content: "";
   transition: 0.5s;
 }
-header div.menu div.options div.option p:hover::after {
+header div.menu div.options a.option:hover::after {
+  width: 100%;
+}
+header div.menu div.options a.active::after {
+  /*background-color: #ff3f81;
+  border: solid #ff3f81;
+  border-radius: 20px;*/
   width: 100%;
 }
 header div.scroll-menu {
@@ -58,6 +66,10 @@ header div.scroll-menu {
   background-color: white;
   opacity: 0.95;
   box-shadow: 5px 10px 70px grey;
+  color: black;
+}
+header div.scroll-menu div.options a.option {
+  color: black;
 }
 
 div#back-to-top {
@@ -80,38 +92,54 @@ div#back-to-top:hover {
 div.banner {
   width: 100%;
   height: 100%;
-  background-image: url("../../../graphics/image/home/background.png");
-  background-position: center;
 }
 div.banner div.container {
-  position: relative;
+  position: absolute;
   left: 10%;
-  width: 90%;
   top: 40%;
   transform: translateY(-50%);
+  padding: 15px;
 }
 div.banner div.container div.title {
-  width: 40%;
-  min-width: 500px;
   font-family: "Inter";
+  font-weight: 700;
   font-size: 100px;
   line-height: 120px;
+  padding-bottom: 30px;
 }
 div.banner div.container div.title p {
-  margin-bottom: 30px;
+  color: white;
+  margin: 0;
+  white-space: pre;
 }
-div.banner div.container div.title p span#typewriter-text {
-  color: purple;
-}
-div.banner div.container div.title p span#typewriter-text::after {
-  content: "";
-  height: 110px;
-  width: 10px;
-  margin: 5 5px;
-  background-color: black;
+div.banner div.container div.title p span#typewriter-box {
+  background-color: white;
+  overflow: hidden;
   display: inline-block;
-  vertical-align: middle;
-  animation: 1s cursor-blinking infinite;
+  vertical-align: bottom;
+  animation: all 0.5s;
+  transition: all 0.5s;
+}
+div.banner div.container div.title p span#typewriter-box span#typewriter-text {
+  color: purple;
+  padding: 0 10px;
+  white-space: pre;
+  animation: all 0.5s;
+  transition: all 0.5s;
+  max-width: 100vh;
+  /*&::after {
+      content: "";
+      height: 100px;
+      width: 10px;
+      margin: 5 5px;
+      background-color: black;
+      display: inline-block;
+      vertical-align: sub;
+      animation: 1s cursor-blinking infinite;
+  }*/
+}
+div.banner div.container div.title p span#typewriter-box span.invisible {
+  opacity: 0;
 }
 div.banner div.container div.button-box {
   display: inline-flex;
@@ -181,59 +209,113 @@ div.banner div.scroll div.text p {
 }
 
 div.button {
+  display: inline-block;
   background-color: white;
-  padding: 10px 20px;
   margin: 0 20px 0 0;
-  font-family: "Roboto Slab";
+}
+div.button a {
+  display: block;
+  background-color: transparent;
+  position: relative;
+  padding: 10px 20px;
+  font-family: "Inter";
   font-size: 15px;
-  border: 0px solid black;
-  border-radius: 10px;
+  line-height: 16px;
+  z-index: 1;
+  transition: all 0.5s;
 }
-div.button div.content {
-  margin: 0 auto;
-  display: inline-flex;
-}
-div.button div.content div.text {
-  padding: 0 5px;
-}
-div.button div.content div.text p {
-  margin: 0;
-}
-div.button div.content div.icon {
-  padding: 0 5px;
+div.button a::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  left: 0;
+  top: 0;
   height: 100%;
+  width: 0%;
+  background-color: purple;
+  transition: all 0.5s;
 }
-div.button div.content div.icon img {
-  width: 20px;
+div.button a span.icon {
+  display: inline-block;
+  padding-left: 10px;
+}
+div.button a span.icon img {
+  vertical-align: middle;
+  height: 16px;
+}
+div.button a:hover {
+  color: white;
+}
+div.button a:hover::after {
+  width: 100%;
 }
 
-div.button-hover {
-  box-shadow: none;
-  transition: 0.2s;
-  background-color: white;
-}
-div.button-hover:hover {
-  box-shadow: 5px 10px 50px grey;
-  background-color: purple;
-  color: white;
+/*div.button-hover {
+    box-shadow: none;
+    transition: 0.2s;
+    background-color: white;
+
+    &:hover {
+        box-shadow: 5px 10px 50px grey;
+        color: white;
+
+        div.background {
+            width: 100%;
+        }
+    }
+}*/
+div#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
 }
 
 div.section {
-  width: 70%;
-  background-color: white;
-  padding: 75px 15%;
-  font-family: "Roboto Slab";
+  font-family: "Inter";
   font-weight: 300;
   text-align: justify;
   font-size: 15px;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  width: 70%;
+  padding: 100px 15%;
 }
-div.section div.title-box div.title {
+div.section div.wave-divider {
+  width: calc(100% + 1.3px);
+  height: 100px;
+  overflow: hidden;
+  line-height: 0;
+}
+div.section div.wave-divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+}
+div.section div.wave-divider.dark {
+  background: url("../../../graphics/image/home/waves (7).svg") repeat;
+}
+div.section div.wave-divider.dark .shape-fill {
+  fill: #23153C;
+}
+div.section div.wave-divider.light {
+  background: url("../../../graphics/image/home/waves (6).svg") repeat;
+}
+div.section div.wave-divider.light .shape-fill {
+  fill: #ffffff;
+}
+div.section div.title-box h1.title {
+  margin: 0;
   text-align: center;
-  font-family: "Roboto Slab";
+  font-family: "Inter";
   font-size: 50px;
   text-transform: uppercase;
+  position: relative;
 }
-div.section div.title-box div.title p::after {
+div.section div.title-box h1.title::after {
+  position: absolute;
   content: "";
   width: 10%;
   height: 0.5px;
@@ -243,7 +325,7 @@ div.section div.title-box div.title p::after {
 }
 div.section div.text-box {
   width: 100%;
-  margin-top: 40px;
+  padding-top: 40px;
   display: inline-flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -258,7 +340,7 @@ div.section div.text-box.about div.item {
   flex-basis: 310px;
 }
 div.section div.text-box.about div.about-text {
-  font-family: "Roboto Slab";
+  font-family: "Inter";
   font-weight: 300;
   text-align: justify;
 }
@@ -325,7 +407,13 @@ div.section div.text-box.projects div.project div.menu p.name {
 }
 div.section div.text-box.projects div.project div.menu div.button-box div.button {
   width: 200px;
-  margin: 3px auto;
+  margin: 10px auto;
+}
+div.section div.text-box.projects div.project div.menu div.button-box div.button a {
+  color: black;
+}
+div.section div.text-box.projects div.project div.menu div.button-box div.button a:hover {
+  color: white;
 }
 div.section div.text-box.projects div.project:hover img.icon {
   height: 280px;
@@ -337,41 +425,142 @@ div.section div.text-box.projects div.project:hover div.menu {
   height: 300px;
 }
 div.section div.text-box.statistics {
+  width: 50%;
+  margin-right: 25%;
+  margin-left: 25%;
+  margin-top: 100px;
   display: block;
 }
 div.section div.text-box.statistics div.statistic {
   width: 100%;
 }
 div.section div.text-box.statistics div.statistic p.name {
-  font-family: "Roboto Slab";
+  font-family: "Inter";
   font-size: 30px;
   width: 100%;
 }
 div.section div.text-box.statistics div.statistic p.name a.value {
-  font-family: "Roboto Slab";
   font-family: "Inter";
+  font-weight: 700;
   color: purple;
   float: right;
 }
 div.section div.text-box.statistics div.statistic p.name a.to-value {
   display: none;
 }
-
-div.section.statistics {
+div.section div.text-box.services div.service {
+  position: relative;
+  flex-grow: 0;
+  flex-basis: 400px;
+  background-color: white;
+  box-shadow: 5px 10px 70px grey;
+  margin: 90px 5%;
+}
+div.section div.text-box.services div.service img.icon {
+  position: absolute;
+  top: -50px;
+  left: 150px;
+  width: 100px;
+  transition: all 0.5s;
+}
+div.section div.text-box.services div.service div.description {
+  padding-top: 50px;
+}
+div.section div.text-box.services div.service div.description p.category {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+div.section div.text-box.services div.service div.description p.description {
+  padding: 0 40px;
+  line-height: 22px;
+}
+div.section div.text-box.services div.service.service:hover img.icon {
+  position: absolute;
+  top: -60px;
+  left: 140px;
+  width: 120px;
+}
+div.section div.text-box.contacts {
+  display: block;
   width: 50%;
   padding-right: 25%;
   padding-left: 25%;
+  margin-top: 100px;
+}
+div.section div.text-box.contacts div.contact {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  border: 3px solid white;
+  background-color: white;
+  box-shadow: 5px 10px 20px grey;
+  transition: all 0.5s;
+  margin: 30px 0;
+  position: relative;
+}
+div.section div.text-box.contacts div.contact div.icon {
+  display: grid;
+  place-items: center;
+  height: 60px;
+  width: 60px;
+  padding-right: 35px;
+}
+div.section div.text-box.contacts div.contact div.icon img {
+  width: 50px;
+  padding: 0 5px;
+  transition: all 0.5s;
+}
+div.section div.text-box.contacts div.contact div.description {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  margin-left: 105px;
+  height: 60px;
+  vertical-align: bottom;
+  display: inline-block;
+}
+div.section div.text-box.contacts div.contact div.description p.name {
+  font-weight: 700;
+  margin: 0;
+  line-height: 30px;
+}
+div.section div.text-box.contacts div.contact div.description a.link {
+  line-height: 30px;
+}
+div.section div.text-box.contacts div.contact:hover {
+  border: 3px solid purple;
+}
+div.section div.text-box.contacts div.contact:hover div.icon img {
+  width: 54px;
+  padding: 0 3px;
 }
 
-div.section:nth-child(odd) {
-  background-color: #f2f2f2;
+div.section.dark {
+  padding: 100px 0;
+  margin: 100px 15%;
+  background-color: white;
+}
+div.section.dark div.title-box, div.section.dark div.text-box {
+  background-color: white;
+}
+div.section.dark h1, div.section.dark p, div.section.dark a, div.section.dark span {
+  color: black;
+}
+
+div.section:last-of-type {
+  padding-bottom: 200px;
+}
+
+footer {
+  z-index: 100;
 }
 
 .footer {
   background-color: #f2f2f2;
   color: black;
   padding: 30px 150px;
-  margin-top: 200px;
+  z-index: 100;
 }
 .footer div.web-title {
   height: 54px;
@@ -392,7 +581,7 @@ div.section:nth-child(odd) {
 }
 .footer div.text p {
   margin: 0;
-  font-family: "Roboto Slab";
+  font-family: "Inter";
   font-size: 15px;
   line-height: 54px;
 }

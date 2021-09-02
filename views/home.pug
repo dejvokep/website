@@ -11,133 +11,117 @@ html
                     .title
                         h1 DEJVOKEP
                 .options
-                    a.clickable(href="#top")
-                        .option
-                            p Home
-                    a.clickable(href="#about-me")
-                        .option
-                            p About
-                    a.clickable(href="#projects")
-                        .option
-                            p Projects
-                    a.clickable(href="#statistics")
-                        .option
-                            p Statistics
+                    a.option(href="#top") Home
+                    a.option(href="#about-me") About
+                    a.option(href="#software") Software
+                    a.option(href="#services") Services
+                    a.option(href="#statistics") Statistics
+                    a.option(href="#contact") Contact
+        #background
         .banner(id="top")
             .container
                 .title
-                    p Take the road to cool 
-                        span#typewriter-text software.
+                    p Scalable 
+                        span#typewriter-box
+                            span#typewriter-text software
+                    p for your network.
                 .button-box
-                    a.clickable(href="#projects")
-                        .button.button-hover
-                            .content
-                                .text
-                                    p Download
-                                .icon
-                                    img(src="graphics/icon/download.png", alt="")
-                    a.clickable(href="https://discord.gg/BbhADEy" target="_blank")
-                        .button.button-hover
-                            .content
-                                .text
-                                    p Request yours
-                                .icon
-                                    img(src="graphics/icon/question.png", alt="")
-            .location
-                .icon
-                    img(src="graphics/icon/pin.png", alt="")
-                .text
-                    p D1 motorway, Poprad, Slovakia
-            a.clickable(href="#about-me")
-                .scroll.button-hover
-                    .icon-right.icon
-                        img(src="graphics/icon/arrow-down.png", alt="")
-                    .icon-left.icon
-                        img(src="graphics/icon/arrow-down.png", alt="")
-                    .text
-                        p Scroll down for more
-        
-        #back-to-top(style="transform: translateX(200px)")
-            a.clickable(href="#top")
-                .icon
-                    img(src="graphics/icon/arrow-back-to-top.png", alt="")
+                    div.button
+                        a(href="#software")
+                            | Download
+                            span.icon
+                                img(src="graphics/icon/download.png", alt="")
+                    div.button
+                        a(href="https://discord.gg/BbhADEy" target="_blank")
+                            | Request yours
+                            span.icon
+                                img(src="graphics/icon/question.png", alt="")
+            //a(href="#about-me")
+            //    .scroll.button-hover
+            //        .icon-right.icon
+            //            img(src="graphics/icon/arrow-down.png", alt="")
+            //        .icon-left.icon
+            //            img(src="graphics/icon/arrow-down.png", alt="")
+            //        .text
+            //            p Scroll down for more
         .section(id="about-me")
             .title-box
-                .title About me
+                h1.title About me
             .text-box.about
                 .about-text.item
                     h1 Nice to meet You,
-                    p My name is dejvokep (formerly known as davidcubesvk) and I am an independent developer with over 3 years of coding experience.
+                    p My name is David and I am a Java and back-end web developer with over 3 years of experience in software engineering.
                     p I mostly program plugins for game servers based on Spigot platform, also Discord bots with wide range of uses. Most of my projects are public, but I also take personal requests.
-                    p In free time, besides programming, I enjoy watching movies, playing games with my friends and cycling.
-                    p I am also very conscientous, take things seriously and when I start with something, I never give up and mostly take it all the way to the end, although, it's not always that easy.
+                    p I am very conscientous, take things seriously and when I start with something, I never give up and mostly take it all the way to the end, although, it's not always that easy.
                     p In the past I had the chance to meet amazing people and work on large server networks with big player bases.
                     p Thank you for visiting my website!
-                .experience-box.item
+                .experience-box.item#experience-box
                     h1 My experience
                     .experience
                         .description
                             p.name Java
-                                a.time 3 years
+                                a.time(data-current-time=time, data-from-time=1522447200000) 3 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name JavaScript
-                                a.time 1 year
+                                a.time(data-current-time=time, data-from-time=1569794400000) 1 year
                         .bar
                             .fill
                     .experience
                         .description
                             p.name HTML, CSS, Sass
-                                a.time 2 years
+                                a.time(data-current-time=time, data-from-time=1564524000000) 2 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name SQL (Structured Query Language)
-                                a.time 2 years
+                                a.time(data-current-time=time, data-from-time=1543532400000) 2 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name Redis
-                                a.time 1 year
+                                a.time(data-current-time=time, data-from-time=1596146400000) 1 year
                         .bar
                             .fill
                     .experience
                         .description
                             p.name Maven
-                                a.time 3 years
+                                a.time(data-current-time=time, data-from-time=1522447200000) 3 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name GIT and version control
-                                a.time 1 year
+                                a.time(data-current-time=time, data-from-time=1564524000000) 2 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name Node.js
-                                a.time 6 months
+                                a.time(data-current-time=time, data-from-time=1619733600000) 6 months
                         .bar
                             .fill
                     .experience
                         .description
                             p.name Spigot and BungeeCord API
-                                a.time 3 years
+                                a.time(data-current-time=time, data-from-time=1522447200000) 3 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name JDA (Java Discord API)
-                                a.time 2 years
+                                a.time(data-current-time=time, data-from-time=1564524000000) 2 years
                         .bar
                             .fill
-        .section(id="projects")
+            
+        .section.dark(id="software")
+            //div.wave-divider.light
             .title-box
-                .title Projects (public ones)
+                h1.title Software
             .text-box.projects
                 .project.item
                     img(src="graphics/icon/secured-network.png", alt="").icon
@@ -145,97 +129,131 @@ html
                     .menu
                         p.name SecuredNetwork
                         .button-box
-                            a.clickable(href=securednetwork.page target="_blank")
-                                .button.button-hover
-                                    .content
-                                        .text
-                                            p Project page
-                                        .icon
-                                            img(src="graphics/icon/foreign.png", alt="")
-                            a.clickable(href=securednetwork.docs target="_blank")
-                                .button.button-hover
-                                    .content
-                                        .text
-                                            p Documentation
-                                        .icon
-                                            img(src="graphics/icon/open-book.png", alt="")
-                            a.clickable(href=securednetwork.download target="_blank")
-                                .button.button-hover
-                                    .content
-                                        .text
-                                            p Download
-                                        .icon
-                                            img(src="graphics/icon/download.png", alt="")
+                            .button
+                                a(href=securednetwork.page target="_blank")
+                                    | Project page
+                                    span.icon
+                                        img(src="graphics/icon/foreign.png", alt="")
+                            .button
+                                a(href=securednetwork.docs target="_blank")
+                                    | Documentation
+                                    span.icon
+                                        img(src="graphics/icon/open-book.png", alt="")
+                            .button
+                                a(href=securednetwork.download target="_blank")
+                                    | Download
+                                    span.icon
+                                        img(src="graphics/icon/download.png", alt="")
                 .project.item
                     img(src="graphics/icon/clicks-per-second.png", alt="").icon
                     .gradient
                     .menu
                         p.name ClicksPerSecond
                         .button-box
-                            a.clickable(href=clickspersecond.page target="_blank")
-                                .button.button-hover
-                                    .content
-                                        .text
-                                            p Project page
-                                        .icon
-                                            img(src="graphics/icon/foreign.png", alt="")
-                            a.clickable(href=clickspersecond.docs target="_blank")
-                                .button.button-hover
-                                    .content
-                                        .text
-                                            p Documentation
-                                        .icon
-                                            img(src="graphics/icon/open-book.png", alt="")
-                            a.clickable(href=clickspersecond.download target="_blank")
-                                .button.button-hover
-                                    .content
-                                        .text
-                                            p Download
-                                        .icon
-                                            img(src="graphics/icon/download.png", alt="")
+                            .button
+                                a(href=clickspersecond.page target="_blank")
+                                    | Project page
+                                    span.icon
+                                        img(src="graphics/icon/foreign.png", alt="")
+                            .button
+                                a(href=clickspersecond.docs target="_blank")
+                                    | Documentation
+                                    span.icon
+                                        img(src="graphics/icon/open-book.png", alt="")
+                            .button
+                                a(href=clickspersecond.download target="_blank")
+                                    | Download
+                                    span.icon
+                                        img(src="graphics/icon/download.png", alt="")
                 .project.item
                     img(src="graphics/icon/repair-item.png", alt="").icon
                     .gradient
                     .menu
                         p.name RepairItem
                         .button-box
-                            a.clickable(href=repairitem.page target="_blank")
-                                .button.button-hover
-                                    .content
-                                        .text
-                                            p Project page
-                                        .icon
-                                            img(src="graphics/icon/foreign.png", alt="")
-                            a.clickable(href=repairitem.docs target="_blank")
-                                .button.button-hover
-                                    .content
-                                        .text
-                                            p Documentation
-                                        .icon
-                                            img(src="graphics/icon/open-book.png", alt="")
-                            a.clickable(href=repairitem.download target="_blank")
-                                .button.button-hover
-                                    .content
-                                        .text
-                                            p Download
-                                        .icon
-                                            img(src="graphics/icon/download.png", alt="")
-        .section.statistics(id="statistics")
+                            .button
+                                a(href=repairitem.page target="_blank")
+                                    | Project page
+                                    span.icon
+                                        img(src="graphics/icon/foreign.png", alt="")
+                            .button
+                                a(href=repairitem.docs target="_blank")
+                                    | Documentation
+                                    span.icon
+                                        img(src="graphics/icon/open-book.png", alt="")
+                            .button
+                                a(href=repairitem.download target="_blank")
+                                    | Download
+                                    span.icon
+                                        img(src="graphics/icon/download.png", alt="")
+        .section.dark(id="services")
+            //div.wave-divider.dark
             .title-box
-                .title Statistics
-            .text-box.statistics
+                h1.title Services
+            .text-box.services
+                .service.item
+                    img(src="graphics/icon/minecraft.svg", alt="").icon
+                    .description
+                        p.category Minecraft plugin development
+                        p.description Does not matter what you need - a new plugin, server core or just update of a plugin to the newest version. With years of experience, I've got you covered.
+                .service.item
+                    img(src="graphics/icon/discord-color.svg", alt="").icon
+                    .description
+                        p.category Discord bot development
+                        p.description Want to add some bot to your Discord server to make people entertained? Or just some utility one? No problem.
+                .service.item
+                    img(src="graphics/icon/web.svg", alt="").icon
+                    .description
+                        p.category Backend web development
+                        p.description If you need an API for your web application, I can make one for you.
+
+        .section(id="statistics")
+            //div.wave-divider.light
+            .title-box
+                h1.title Statistics
+            .text-box.statistics#stats-box
                 .statistic
-                    p.name Plugin downloads:
-                        a.value 0
-                        a.to-value= plugin_downloads
+                    p.name
+                        | Plugin downloads:
+                        a.stats-value.value(data-to-value=plugin_downloads) 0
                 .statistic
-                    p.name Projects:
-                        a.value 0
-                        a.to-value= projects
+                    p.name
+                        | Projects:
+                        a.stats-value.value(data-to-value=projects) 0
                 .statistic
-                    p.name Average stars in reviews:
-                        a.value 0
-                        a.to-value= average_stars
+                    p.name
+                        | Average stars in reviews:
+                        a.stats-value.value(data-to-value=average_stars) 0
+
+        .section.dark(id="contact")
+            //div.wave-divider.light
+            .title-box
+                h1.title Contact
+            .text-box.contacts
+                .contact
+                    .icon
+                        img(src="graphics/icon/water-tap.svg", alt="")
+                    .description
+                        p.name SpigotMC
+                        a.link @dejvokep
+                .contact
+                    .icon
+                        img(src="graphics/icon/gmail.svg", alt="")
+                    .description
+                        p.name Email
+                        a.link davidcubesvkdev@gmail.com
+                .contact
+                    .icon
+                        img(src="graphics/icon/discord-color.svg", alt="")
+                    .description
+                        p.name Discord
+                        a.link @dejvokep
+                .contact
+                    .icon
+                        img(src="graphics/icon/discord-color.svg", alt="")
+                    .description
+                        p.name Discord server
+                        a.link https://discord.gg/BbhADEy
         footer
             .footer
                 .web-title
@@ -245,6 +263,11 @@ html
                 .text
                     p.
                         #[strong Privacy statement:] no personal information are collected.
-    script(src="script/home/typewriter.js")
+    script(src="script/home/typewriter copy.js")
+    script(src="script/home/time-passed.js")
     script(src="script/home/scroll-reveal.js", type="module")
     script(src="script/home/animations.js" type="module")
+    script(src="script/home/click-scroll.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js")
+    script(src=src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js")
+    script(src="script/home/vantajs-init.js")

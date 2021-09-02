@@ -18,7 +18,9 @@ app.use(express.static('public'))
 app.get("/", (req, res) => {
     // Render
     res.render("home", 
-    {plugin_downloads: data.getPluginDownloads(), 
+    {
+        time: Date.now(),
+        plugin_downloads: data.getPluginDownloads(), 
         projects: data.getProjects(), 
         average_stars: data.getAverageStars(), 
         repairitem: {

@@ -1,7 +1,7 @@
 //Element
 let typewriterText = undefined;
 //Messages
-const messages = ["software.", "plugins.", "websites.", "Discord bots."];
+const messages = ["software", "plugins", "Discord bots"];
 
 const initWait = 3000;
 const postWriteDelay = 2000;
@@ -16,13 +16,13 @@ let loop = 0;
 let message = 0;
 let deleting = false;
 
-typewriterText = document.getElementById("typewriter-text");
+text = document.getElementById("typewriter-text");
 setTimeout(remove, initWait);
 
 //Typewriter method
 function write() {
     //If finished writing
-    if (typewriterText.innerText == messages[message]) {
+    if (text.innerText == messages[message]) {
         //Run the deletion function
         setTimeout(remove, postWriteDelay);
         //Return
@@ -30,13 +30,13 @@ function write() {
     }
 
     //Display the new message
-    typewriterText.innerText = messages[message].substring(0, typewriterText.innerText.length + 1);
+    text.innerText = messages[message].substring(0, text.innerText.length + 1);
     setTimeout(write, writeDelay);
 }
 
 function remove() {
     //If finished writing
-    if (typewriterText.innerText == "") {
+    if (text.innerText == "") {
         //Change the message
         message++;
         //If out of range
@@ -50,7 +50,7 @@ function remove() {
     }
 
     //Display the new message
-    typewriterText.innerText = messages[message].substring(0, typewriterText.innerText.length - 1);
+    text.innerText = messages[message].substring(0, text.innerText.length - 1);
 
     setTimeout(remove, removeDelay);
 }
