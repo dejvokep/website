@@ -119,6 +119,7 @@ div.banner div.container div.title p span#typewriter-box {
   vertical-align: bottom;
   animation: all 0.5s;
   transition: all 0.5s;
+  max-width: 100vh;
 }
 div.banner div.container div.title p span#typewriter-box span#typewriter-text {
   color: purple;
@@ -557,6 +558,7 @@ footer {
 }
 
 .footer {
+  position: relative;
   background-color: #f2f2f2;
   color: black;
   padding: 30px 150px;

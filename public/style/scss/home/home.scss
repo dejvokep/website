@@ -148,6 +148,7 @@ div.banner {
                     vertical-align: bottom;
                     animation: all .5s;
                     transition: all .5s;
+                    max-width: 100vh;
 
                     span#typewriter-text {
                         color: purple;
@@ -681,6 +682,7 @@ footer {
     z-index: 100;
 }
 .footer {
+    position: relative;
     background-color: #f2f2f2;
     color: black;
     padding: 30px 150px;
