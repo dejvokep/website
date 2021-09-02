@@ -10,7 +10,7 @@ window.onscroll = function() {
         scrollFunction();
     }
     elements.forEach(function(callback, element) {
-        if (element.offsetTop <= document.body.scrollTop + window.innerHeight) {
+        if (element.getBoundingClientRect().top <= window.innerHeight) {
             callback();
             elements.delete(element);
         }

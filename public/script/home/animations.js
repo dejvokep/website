@@ -4,7 +4,7 @@ import { animate } from "./integer-animation.js";
 // Experience box
 const experienceBox = document.getElementById("experience-box");
 // Add element
-addElement(experienceBox, function () {
+addElement(experienceBox.firstChild, function () {
     // Times and fills
     const times = experienceBox.getElementsByClassName("time")
     const fills = experienceBox.getElementsByClassName("fill")
@@ -19,7 +19,7 @@ addElement(experienceBox, function () {
 // Stats box
 const statsBox = document.getElementById("stats-box");
 // Add element
-addElement(statsBox, function () {
+addElement(statsBox.firstChild, function () {
     // Stats values
     const statsValues = document.getElementsByClassName("stats-value");
     // Loop
@@ -45,15 +45,12 @@ window.addEventListener("scroll", function() {
 
     if (scrollTop < windowHeight/10 && menu.classList.contains("scroll-menu")) {
         menu.classList.remove("scroll-menu");
-        backToTop.style.transform = "translateX(" + windowWidth + ")";
     } else if (scrollTop >= windowHeight/10 && !menu.classList.contains("scroll-menu")) {
         menu.classList.add("scroll-menu");
-        backToTop.style.transform = null;
     }
 });
 
 function resetMenuOptions() {
-    console.log("reset")
     // Scroll index
     const scrollIndex = document.body.scrollTop + windowHeight * 0.4;
     // Find nearest
