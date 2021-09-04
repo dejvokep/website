@@ -30,7 +30,13 @@ addElement(statsBox.firstChild, function () {
 });
 
 const menu = document.getElementById("menu");
-const options = menu.getElementsByClassName("option")
+
+const optionBox = menu.getElementsByClassName("option-box")[0];
+const menuButton = menu.getElementsByClassName("menu-button")[0];
+const menuCloseButton = menu.getElementsByClassName("menu-back-button")[0];
+const mobileMenuMask = document.getElementsByClassName("mobile-menu-mask")[0];
+
+const options = menu.getElementsByClassName("option");
 const backToTop = document.getElementById("back-to-top");
 const windowHeight = window.innerHeight;
 const windowWidth = "200px";
@@ -49,6 +55,22 @@ window.addEventListener("scroll", function() {
         menu.classList.add("scroll-menu");
     }
 });
+
+mobileMenuMask.addEventListener("click", function() {
+    toggleMenu();
+});
+menuButton.addEventListener("click", function() {
+    toggleMenu();
+});
+
+menuCloseButton.addEventListener("click", function() {
+    toggleMenu();
+});
+
+function toggleMenu() {
+    optionBox.classList.toggle("open");
+    mobileMenuMask.classList.toggle("shown");
+}
 
 function resetMenuOptions() {
     // Scroll index

@@ -10,21 +10,27 @@ html
                     .logo
                     .title
                         h1 DEJVOKEP
-                .options
-                    a.option(href="#top") Home
-                    a.option(href="#about-me") About
-                    a.option(href="#software") Software
-                    a.option(href="#services") Services
-                    a.option(href="#statistics") Statistics
-                    a.option(href="#contact") Contact
+                .mobile-menu-mask
+                .option-box
+                    .menu-back-button
+                        img(src="graphics/icon/back.svg", alt="")
+                    .options
+                        a.option(href="#top") Home
+                        a.option(href="#about-me") About
+                        a.option(href="#software") Software
+                        a.option(href="#services") Services
+                        a.option(href="#statistics") Statistics
+                        a.option(href="#contact") Contact
+                .menu-button
         #background
         .banner(id="top")
             .container
                 .title
-                    p Scalable 
+                    p.responsive-text(data-min-width=1100, data-min-size=50, data-max-width=2500, data-max-size=100)
+                        | Scalable 
                         span#typewriter-box
                             span#typewriter-text software
-                    p for your network.
+                        |  <br>for your network.
                 .button-box
                     div.button
                         a(href="#software")
@@ -268,6 +274,7 @@ html
     script(src="script/home/scroll-reveal.js", type="module")
     script(src="script/home/animations.js" type="module")
     script(src="script/home/click-scroll.js")
+    script(src="script/home/font-size.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js")
     script(src=src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js")
     script(src="script/home/vantajs-init.js")
