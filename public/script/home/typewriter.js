@@ -1,3 +1,5 @@
+const { text } = require("express");
+
 //Element
 let typewriterText = undefined;
 //Messages
