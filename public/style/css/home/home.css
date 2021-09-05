@@ -358,7 +358,7 @@ div.section div.title-box h1.title::after {
 div.section div.text-box {
   width: 100%;
   padding-top: 40px;
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
@@ -367,9 +367,12 @@ div.section div.text-box div.item {
   margin: 40px 5%;
   flex-grow: 1;
   flex-basis: 0;
+  flex-shrink: 0;
 }
 div.section div.text-box.about div.item {
   flex-basis: 310px;
+  min-width: 310px;
+  flex-shrink: 0;
 }
 div.section div.text-box.about div.about-text {
   font-family: "Inter";
@@ -618,21 +621,35 @@ footer {
 }
 
 @media only screen and (max-width: 1100px) {
+  p {
+    font-size: 40px;
+  }
+
+  header div.menu {
+    margin: 0 0;
+    padding: 30px 10%;
+    width: 80%;
+    height: 70px;
+  }
   header div.menu div.web-title {
     float: left;
-    height: 54px;
+    height: 70px;
   }
   header div.menu div.web-title div.title {
-    line-height: 54px;
+    line-height: 70px;
   }
   header div.menu div.web-title div.title h1 {
     font-family: "Inter";
     font-weight: 900;
     text-transform: uppercase;
     font-style: italic;
+    font-size: 80px;
     margin: 0;
   }
   header div.menu div.menu-button {
+    height: 40px;
+    width: 40px;
+    margin: 15px;
     display: block;
   }
   header div.menu div.mobile-menu-mask.shown {
@@ -654,13 +671,23 @@ footer {
   }
   header div.menu div.option-box div.menu-back-button {
     display: block;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    height: 100px;
+    width: 100px;
+  }
+  header div.menu div.option-box div.menu-back-button img {
+    height: 100px;
   }
   header div.menu div.option-box div.options a.option {
     display: block;
-    margin: 5px 20px;
+    margin: 20px 40px;
     color: black;
-    font-size: 15px;
-    line-height: 44px;
+    font-size: 50px;
+    line-height: 100px;
+  }
+  header div.menu div.option-box div.options a.option::after {
+    height: 5px;
   }
   header div.menu div.option-box div.options a.option:hover::after {
     width: 100%;
@@ -678,9 +705,25 @@ footer {
     background-color: black;
   }
 
+  div.banner div.container div.title {
+    padding-bottom: 100px;
+  }
+  div.banner div.container div.button-box {
+    flex-direction: column;
+  }
+  div.banner div.container div.button-box div.button {
+    margin-bottom: 30px;
+  }
+
   div.section {
     width: 90%;
     padding: 100px 5%;
+  }
+  div.section div.text-box.about {
+    flex-direction: column;
+  }
+  div.section div.text-box.about div.experience-box div.experience div.bar {
+    height: 10px;
   }
   div.section div.text-box.statistics {
     width: 90%;
@@ -695,6 +738,19 @@ footer {
 
   div.section.dark {
     margin: 100px 5%;
+  }
+
+  div.button a {
+    padding: 30px 60px;
+    font-size: 42px;
+    line-height: 45px;
+  }
+  div.button a span.icon {
+    float: right;
+    padding-left: 40px;
+  }
+  div.button a span.icon img {
+    height: 45px;
   }
 
   .footer {
