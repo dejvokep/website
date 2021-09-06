@@ -27,12 +27,12 @@ html
         .banner(id="top")
             .container
                 .title
-                    p.responsive-text(data-min-width=1100, data-min-size=50, data-max-width=2500, data-max-size=100)
+                    p.responsive-text(data-min-width=1100, data-min-size=45, data-max-width=2500, data-max-size=100)
                         | Scalable 
-                        span#new-line <br>
+                        span.new-line <br>
                         span#typewriter-box
                             span#typewriter-text software
-                        |  <br>for your network.
+                        span.rest for your network.
                 .button-box
                     div.button
                         a(href="#software")
@@ -221,17 +221,14 @@ html
                 h1.title Statistics
             .text-box.statistics#stats-box
                 .statistic
-                    p.name
-                        | Plugin downloads:
-                        a.stats-value.value(data-to-value=plugin_downloads) 0
+                    p.name  Plugin downloads:
+                    p.stats-value.value(data-to-value=plugin_downloads) 0
                 .statistic
-                    p.name
-                        | Projects:
-                        a.stats-value.value(data-to-value=projects) 0
+                    p.name Projects:
+                    p.stats-value.value(data-to-value=projects) 0
                 .statistic
-                    p.name
-                        | Average stars in reviews:
-                        a.stats-value.value(data-to-value=average_stars) 0
+                    p.name Average stars in reviews:
+                    p.stats-value.value(data-to-value=average_stars) 0
 
         .section.dark(id="contact")
             //div.wave-divider.light

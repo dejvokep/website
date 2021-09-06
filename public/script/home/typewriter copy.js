@@ -19,21 +19,21 @@ const changeDelay = 2000;
 let message = 0;
 let deleting = false;
 
-setTimeout(change, initWait);
-// Change box width
-box.style.width = text.getBoundingClientRect().width;
+window.addEventListener("load", function() {
+    setTimeout(change, initWait);
+})
 
 function change() {
     // Make invisible
     changeVisiblity()
     // Wait
     setTimeout(function() {
+        // Change box width
+        box.style.width = text.getBoundingClientRect().width;
         // Change to next message
         nextMessage();
-        // The width
-        const newWidth = text.getBoundingClientRect().width;
         // Change box width
-        box.style.width = newWidth;
+        box.style.width = text.getBoundingClientRect().width;
         // Wait
         setTimeout(function() {
             // Make visible
