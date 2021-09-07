@@ -42,6 +42,7 @@ const windowHeight = window.innerHeight;
 const windowWidth = "200px";
 let activeOption = undefined
 let timer = null;
+resetMenuOptions()
 window.addEventListener("scroll", function() {
     this.window.clearTimeout(timer)
     timer = setTimeout(resetMenuOptions, 75)
@@ -77,7 +78,6 @@ function resetMenuOptions() {
     const scrollIndex = document.body.scrollTop + windowHeight * 0.4;
     // Find nearest
     const nearest = findNearest(scrollIndex)
-    console.log(scrollIndex)
     // If the same
     if (nearest === activeOption)
         return
@@ -101,4 +101,6 @@ function findNearest(scrollIndex) {
             if (document.getElementById(option.getAttribute("data-link")).offsetTop < scrollIndex)
                 return option
     }
+
+    return options[0]
 }

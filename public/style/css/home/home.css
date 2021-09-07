@@ -130,7 +130,6 @@ div.banner div.container {
   left: 10%;
   top: 40%;
   transform: translateY(-50%);
-  padding: 15px;
 }
 div.banner div.container div.title {
   font-family: "Inter";
@@ -628,8 +627,8 @@ footer {
 
 @media only screen and (max-width: 1100px) {
   header div.menu {
-    width: calc(100% - 100px);
-    padding: 0 50px;
+    width: 90%;
+    padding: 0 5%;
     margin: 0;
   }
   header div.menu div.web-title {
@@ -696,6 +695,22 @@ footer {
     display: inline;
   }
 
+  div.button {
+    display: block;
+  }
+  div.button a {
+    display: block;
+    width: calc(100% - 40px);
+    text-align: center;
+  }
+  div.button a span.icon {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    padding-top: 5px;
+  }
+
   div.section {
     width: 90%;
     padding: 40px 5%;
@@ -754,6 +769,9 @@ footer {
   }
 }
 @media only screen and (max-width: 400px) {
+  div.section div.title-box h1.title {
+    font-size: 40px;
+  }
   div.section div.text-box.contacts div.contact div.description a.link {
     font-size: 12px;
   }

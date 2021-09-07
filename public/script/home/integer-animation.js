@@ -1,5 +1,4 @@
 export function animate(element, start, stop, duration) {
-    console.log(stop);
     let delay = duration / (stop - start);
     let value = start;
     let difference = 1;
