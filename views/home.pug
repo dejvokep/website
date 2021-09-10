@@ -1,4 +1,5 @@
-html
+<!DOCTYPE html>
+html(lang="en")
     head
         link(rel="stylesheet", href="style/css/global.css")
         link(rel="stylesheet", href="style/css/home/home.css")
@@ -16,12 +17,12 @@ html
                     .menu-back-button
                         img(src="graphics/icon/back.svg", alt="")
                     .options
-                        a.option(href="#top") Home
-                        a.option(href="#about-me") About
-                        a.option(href="#software") Software
-                        a.option(href="#services") Services
-                        a.option(href="#statistics") Statistics
-                        a.option(href="#contact") Contact
+                        a.option(href="#top", rel="noreferrer") Home
+                        a.option(href="#about-me", rel="noreferrer") About
+                        a.option(href="#software", rel="noreferrer") Software
+                        a.option(href="#services", rel="noreferrer") Services
+                        a.option(href="#statistics", rel="noreferrer") Statistics
+                        a.option(href="#contact", rel="noreferrer") Contact
                 .menu-button
         #background
         .banner(id="top")
@@ -35,12 +36,12 @@ html
                         span.rest for your network.
                 .button-box
                     div.button
-                        a(href="#software")
+                        a(href="#software", rel="noreferrer")
                             | Download
                             span.icon
                                 img(src="graphics/icon/download.png", alt="")
                     div.button
-                        a(href="https://discord.gg/BbhADEy" target="_blank")
+                        a(href="https://discord.gg/BbhADEy", target="_blank", rel="noreferrer")
                             | Request yours
                             span.icon
                                 img(src="graphics/icon/question.png", alt="")
@@ -68,61 +69,61 @@ html
                     .experience
                         .description
                             p.name Java
-                                a.time(data-current-time=time, data-from-time=1522447200000) 3 years
+                                span.time(data-current-time=time, data-from-time=1522447200000) 3 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name JavaScript
-                                a.time(data-current-time=time, data-from-time=1569794400000) 1 year
+                                span.time(data-current-time=time, data-from-time=1569794400000) 1 year
                         .bar
                             .fill
                     .experience
                         .description
                             p.name HTML, CSS, Sass
-                                a.time(data-current-time=time, data-from-time=1564524000000) 2 years
+                                span.time(data-current-time=time, data-from-time=1564524000000) 2 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name SQL (Structured Query Language)
-                                a.time(data-current-time=time, data-from-time=1543532400000) 2 years
+                                span.time(data-current-time=time, data-from-time=1543532400000) 2 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name Redis
-                                a.time(data-current-time=time, data-from-time=1596146400000) 1 year
+                                span.time(data-current-time=time, data-from-time=1596146400000) 1 year
                         .bar
                             .fill
                     .experience
                         .description
                             p.name Maven
-                                a.time(data-current-time=time, data-from-time=1522447200000) 3 years
+                                span.time(data-current-time=time, data-from-time=1522447200000) 3 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name GIT and version control
-                                a.time(data-current-time=time, data-from-time=1564524000000) 2 years
+                                span.time(data-current-time=time, data-from-time=1564524000000) 2 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name Node.js
-                                a.time(data-current-time=time, data-from-time=1619733600000) 6 months
+                                span.time(data-current-time=time, data-from-time=1619733600000) 6 months
                         .bar
                             .fill
                     .experience
                         .description
                             p.name Spigot and BungeeCord API
-                                a.time(data-current-time=time, data-from-time=1522447200000) 3 years
+                                span.time(data-current-time=time, data-from-time=1522447200000) 3 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name JDA (Java Discord API)
-                                a.time(data-current-time=time, data-from-time=1564524000000) 2 years
+                                span.time(data-current-time=time, data-from-time=1564524000000) 2 years
                         .bar
                             .fill
             
@@ -138,17 +139,17 @@ html
                         p.name SecuredNetwork
                         .button-box
                             .button
-                                a(href=securednetwork.page target="_blank")
+                                a(href=securednetwork.page, target="_blank", rel="noreferrer")
                                     | Project page
                                     span.icon
                                         img(src="graphics/icon/foreign.png", alt="")
                             .button
-                                a(href=securednetwork.docs target="_blank")
+                                a(href=securednetwork.docs, target="_blank", rel="noreferrer")
                                     | Documentation
                                     span.icon
                                         img(src="graphics/icon/open-book.png", alt="")
                             .button
-                                a(href=securednetwork.download target="_blank")
+                                a(href=securednetwork.download, target="_blank", rel="noreferrer")
                                     | Download
                                     span.icon
                                         img(src="graphics/icon/download.png", alt="")
@@ -159,17 +160,17 @@ html
                         p.name ClicksPerSecond
                         .button-box
                             .button
-                                a(href=clickspersecond.page target="_blank")
+                                a(href=clickspersecond.page target="_blank", rel="noreferrer")
                                     | Project page
                                     span.icon
                                         img(src="graphics/icon/foreign.png", alt="")
                             .button
-                                a(href=clickspersecond.docs target="_blank")
+                                a(href=clickspersecond.docs target="_blank", rel="noreferrer")
                                     | Documentation
                                     span.icon
                                         img(src="graphics/icon/open-book.png", alt="")
                             .button
-                                a(href=clickspersecond.download target="_blank")
+                                a(href=clickspersecond.download target="_blank", rel="noreferrer")
                                     | Download
                                     span.icon
                                         img(src="graphics/icon/download.png", alt="")
@@ -180,17 +181,17 @@ html
                         p.name RepairItem
                         .button-box
                             .button
-                                a(href=repairitem.page target="_blank")
+                                a(href=repairitem.page target="_blank", rel="noreferrer")
                                     | Project page
                                     span.icon
                                         img(src="graphics/icon/foreign.png", alt="")
                             .button
-                                a(href=repairitem.docs target="_blank")
+                                a(href=repairitem.docs target="_blank", rel="noreferrer")
                                     | Documentation
                                     span.icon
                                         img(src="graphics/icon/open-book.png", alt="")
                             .button
-                                a(href=repairitem.download target="_blank")
+                                a(href=repairitem.download target="_blank", rel="noreferrer")
                                     | Download
                                     span.icon
                                         img(src="graphics/icon/download.png", alt="")
@@ -243,25 +244,25 @@ html
                         img(src="graphics/icon/water-tap.svg", alt="")
                     .description
                         p.name SpigotMC
-                        a.link @dejvokep
+                        a.link(rel="noreferrer") @dejvokep
                 .contact
                     .icon
                         img(src="graphics/icon/gmail.svg", alt="")
                     .description
                         p.name Email
-                        a.link davidcubesvkdev@gmail.com
+                        a.link(rel="noreferrer") davidcubesvkdev@gmail.com
                 .contact
                     .icon
                         img(src="graphics/icon/discord-color.svg", alt="")
                     .description
                         p.name Discord
-                        a.link @dejvokep
+                        a.link(rel="noreferrer") @dejvokep
                 .contact
                     .icon
                         img(src="graphics/icon/discord-color.svg", alt="")
                     .description
                         p.name Discord server
-                        a.link https://discord.gg/BbhADEy
+                        a.link(rel="noreferrer") https://discord.gg/BbhADEy
         footer
             .footer
                 .web-title

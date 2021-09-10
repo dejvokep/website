@@ -384,7 +384,7 @@ div.section div.text-box.about div.experience-box div.experience div.description
 div.section div.text-box.about div.experience-box div.experience div.description p.name {
   width: 100%;
 }
-div.section div.text-box.about div.experience-box div.experience div.description p.name a.time {
+div.section div.text-box.about div.experience-box div.experience div.description p.name span.time {
   float: right;
 }
 div.section div.text-box.about div.experience-box div.experience div.bar {

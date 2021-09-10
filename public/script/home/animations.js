@@ -47,8 +47,7 @@ window.addEventListener("scroll", function() {
     this.window.clearTimeout(timer)
     timer = setTimeout(resetMenuOptions, 75)
 
-    let scrollTop = document.body.scrollTop;
-
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
     if (scrollTop < windowHeight/10 && menu.classList.contains("scroll-menu")) {
         menu.classList.remove("scroll-menu");
