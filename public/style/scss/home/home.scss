@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&family=Open+Sans:wght@300;400;600&family=Roboto+Slab:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap');
 $primary-font-family: 'Inter';
 
 header {
@@ -34,8 +34,8 @@ header {
 
         div.menu-button {
             float: right;
-            height: 30;
-            width: 30;
+            height: 30px;
+            width: 30px;
             margin: 12px;
             background-color: white;
             mask: url("../../../graphics/icon/menu.svg") no-repeat center / contain;
@@ -224,83 +224,6 @@ div.banner {
             display: inline-flex;
         }
     }
-
-    div.location {
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-        background-color: white;
-        height: 40px;
-        padding: 0 10px;
-        border-radius: 10px;
-
-        div.icon {
-            float: left;
-            height: 100%;
-
-            img {
-                padding: 10px 0;
-                height: 20px;
-                vertical-align: middle;
-            }
-
-            margin-right: 5px;
-        }
-
-        div.text {
-            display: inline-block;
-
-            p {
-                line-height: 40px;
-                font-family: 'Roboto Slab';
-                margin: 0;
-            }
-        }
-    }
-
-    div.scroll {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        height: 40px;
-        width: 250px;
-        padding: 0 10px;
-        border-radius: 10px;
-        animation: floating-y 5s ease-in-out infinite;
-
-        div.icon {
-            height: 100%;
-
-            img {
-                padding: 10px 0;
-                height: 20px;
-                vertical-align: middle;
-            }
-
-            margin: 0 5px;
-        }
-
-        div.icon-right {
-            float: right;
-        }
-
-        div.icon-left {
-            float: left;
-        }
-
-        div.text {
-            display: inline-block;
-            width: 190px;
-
-            p {
-                text-align: center;
-                line-height: 40px;
-                font-family: 'Roboto Slab';
-                margin: 0;
-            }
-        }
-    }
 }
 
 div.button {
@@ -380,36 +303,6 @@ div.section {
     overflow: hidden;
     width: 70%;
     padding: 100px 15%;
-
-    div.wave-divider {
-        //position: absolute;
-        //top: 0;
-        //left: 0; 
-        width: calc(100% + 1.3px);
-        height: 100px;
-        overflow: hidden;
-        line-height: 0;
-
-        svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-        }
-        
-        &.dark {
-            background: url("../../../graphics/image/home/waves (7).svg") repeat;
-            .shape-fill {
-                fill: #23153C;
-            }
-        }
-
-        &.light {
-            background: url("../../../graphics/image/home/waves (6).svg") repeat;
-            .shape-fill {
-                fill: #ffffff;
-            }
-        }
-    }
 
     div.title-box {
         h1.title {
@@ -914,6 +807,12 @@ footer {
                     text-align: center;
                     margin: 5px;
                 }
+            }
+        }
+
+        div.text-box.services {
+            div.service {
+                margin: 75px 5%;
             }
         }
 

@@ -42,19 +42,23 @@ const windowHeight = window.innerHeight;
 const windowWidth = "200px";
 let activeOption = undefined
 let timer = null;
-resetMenuOptions()
+resetMenuOptions();
+changeScrollMenu();
 window.addEventListener("scroll", function() {
     this.window.clearTimeout(timer)
     timer = setTimeout(resetMenuOptions, 75)
+    changeScrollMenu();
+});
 
+function changeScrollMenu() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    if (scrollTop < windowHeight/10 && menu.classList.contains("scroll-menu")) {
+    if (scrollTop < 1 && menu.classList.contains("scroll-menu")) {
         menu.classList.remove("scroll-menu");
-    } else if (scrollTop >= windowHeight/10 && !menu.classList.contains("scroll-menu")) {
+    } else if (scrollTop >= 1 && !menu.classList.contains("scroll-menu")) {
         menu.classList.add("scroll-menu");
     }
-});
+}
 
 mobileMenuMask.addEventListener("click", function() {
     toggleMenu();
