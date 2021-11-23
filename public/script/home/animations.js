@@ -15,7 +15,7 @@ addElement(experienceBox.firstChild, function () {
         fills[i].style.width = times[i].getAttribute("data-fill-to");
     }
 });
-
+/*
 // Stats box
 const statsBox = document.getElementById("stats-box");
 // Add element
@@ -27,7 +27,7 @@ addElement(statsBox.firstChild, function () {
         // Animate
         animate(statsValues[i], 0, parseInt(statsValues[i].getAttribute("data-to-value"))+1, 1000);
     }
-});
+});*/
 
 const menu = document.getElementById("menu");
 
@@ -78,7 +78,7 @@ function toggleMenu() {
 
 function resetMenuOptions() {
     // Scroll index
-    const scrollIndex = document.body.scrollTop + windowHeight * 0.4;
+    const scrollIndex = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0) + windowHeight * 0.4;
     // Find nearest
     const nearest = findNearest(scrollIndex)
     // If the same
@@ -98,12 +98,11 @@ function findNearest(scrollIndex) {
     // Loop from the end
     for (let index = options.length - 1; index >= 0; index--) {
         // Option
-        const option = options[index]
-        if (document.getElementById(option.getAttribute("data-link")))
-            // If above the index
-            if (document.getElementById(option.getAttribute("data-link")).offsetTop < scrollIndex)
-                return option
+        const option = options[index];
+        // If above the index
+        if (document.getElementById(option.getAttribute("href").substring(1)).offsetTop < scrollIndex)
+            return option;
     }
 
-    return options[0]
+    return options[0];
 }

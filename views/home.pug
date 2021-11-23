@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 html(lang="en")
     head
-        link(rel="stylesheet", href="style/css/global.css")
-        link(rel="stylesheet", href="style/css/home/home.css")
-        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous")
+        link(rel="stylesheet" href="style/css/global.css")
+        link(rel="stylesheet" href="style/css/home/home.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
         meta(name="description" content="Dejvokep - scalable software, plugins, bots for your network and servers. I have over 3 years of experience in plugin development and over 2 years in website development. My projects include ClicksPerSecond (a CPS measurement plugin), SecuredNetwork (security for your server) and RepairItem (repairs tool in your inventory). I also offer personal services that will fit your needs not dependending what you need: plugin development, bot development and backend web development.")
         title Dejvokep.com
     body(onload="window.onscroll();")
@@ -16,42 +17,39 @@ html(lang="en")
                 .mobile-menu-mask
                 .option-box
                     .menu-back-button
-                        img(src="graphics/icon/back.svg", alt="")
+                        img(src="graphics/icon/back.svg" alt="")
                     .options
-                        a.option(href="#top", rel="noreferrer") Home
-                        a.option(href="#about-me", rel="noreferrer") About
-                        a.option(href="#software", rel="noreferrer") Software
-                        a.option(href="#services", rel="noreferrer") Services
-                        a.option(href="#statistics", rel="noreferrer") Statistics
-                        a.option(href="#contact", rel="noreferrer") Contact
+                        a.option(href="#top" rel="noreferrer") Home
+                        a.option(href="#about-me" rel="noreferrer") About
+                        a.option(href="#software" rel="noreferrer") Software
+                        a.option(href="#services" rel="noreferrer") Services
+                        a.option(href="#testimonals" rel="noreferrer") Testimonals
+                        a.option(href="#contact" rel="noreferrer") Contact
                 .menu-button
         #background
         .banner(id="top")
             .container
                 .title
                     p.responsive-text(data-min-width=400, data-min-size=35, data-max-width=2500, data-max-size=100)
-                        | Scalable 
-                        span.new-line <br>
-                        span#typewriter-box
-                            span#typewriter-text software
-                        span.rest for your network.
+                        | Hey, I'm David
+                .subtitle
+                    p.responsive-text(data-min-width=400, data-min-size=20, data-max-width=800, data-max-size=20)
+                        | Software engineer from Slovakia. I craft custom applications to help your business.
                 .button-box
                     div.button
-                        a(href="#software", rel="noreferrer")
-                            | Download
-                            span.icon
-                                img(src="graphics/icon/download.png", alt="")
+                        a(href="#software" rel="noreferrer")
+                            | Software
+                            i.bi.bi-boxes
                     div.button
-                        a(href="https://discord.gg/BbhADEy", target="_blank", rel="noreferrer")
-                            | Request yours
-                            span.icon
-                                img(src="graphics/icon/question.png", alt="")
+                        a(href="https://discord.gg/BbhADEy" target="_blank" rel="noreferrer")
+                            | Hire me
+                            i.bi.bi-envelope-plus
             //a(href="#about-me")
             //    .scroll.button-hover
             //        .icon-right.icon
-            //            img(src="graphics/icon/arrow-down.png", alt="")
+            //            img(src="graphics/icon/arrow-down.png" alt="")
             //        .icon-left.icon
-            //            img(src="graphics/icon/arrow-down.png", alt="")
+            //            img(src="graphics/icon/arrow-down.png" alt="")
             //        .text
             //            p Scroll down for more
         .section(id="about-me")
@@ -60,13 +58,13 @@ html(lang="en")
             .text-box.about
                 .about-text.item
                     h1 Nice to meet You,
-                    p My name is David and I am a Java and back-end web developer with over 3 years of experience in software engineering.
+                    p My name is David and I am a young technology enthusiatist and software engineer with Java and back-end web developer with over 3 years of experience in software engineering.
                     p I mostly program plugins for game servers based on Spigot platform, also Discord bots with wide range of uses. Most of my projects are public, but I also take personal requests.
-                    p I am very conscientous, take things seriously and when I start with something, I never give up and mostly take it all the way to the end, although, it's not always that easy.
-                    p In the past I had the chance to meet amazing people and work on large server networks with big player bases.
+                    p I am very conscientous, take things seriously and when I start with something, I never give up and take it all the way to the end, although, it's not always that easy.
+                    p In the past I had the chance to meet amazing people and work on large server networks with big player bases, for one of which I'm working and am employed at.
                     p Thank you for visiting my website!
                 .experience-box.item#experience-box
-                    h1 My experience
+                    h1 Experience
                     .experience
                         .description
                             p.name Java
@@ -127,157 +125,223 @@ html(lang="en")
                                 span.time(data-current-time=time, data-from-time=1564524000000) 2 years
                         .bar
                             .fill
-            
-        .section.dark(id="software")
+
+        .section(id="software")
             //div.wave-divider.light
             .title-box
                 h1.title Software
+                div.subtitle
+                    p My public personal projects made with a ton of effort, preciously programmed to deliver the best performance and user experience along the way.
+                    p 32 #[i.bi.bi-boxes] #[i.bi.bi-dot] #{plugin_downloads} #[i.bi.bi-download]
             .text-box.projects
                 .project.item
-                    img(src="graphics/icon/secured-network.png", alt="").icon
-                    .gradient
+                    .info
+                        img(src="graphics/icon/secured-network.png" alt="").icon
+                        h1.name SecuredNetwork
+                        p.description Secure your network against breachers in just a few clicks. Just like a firewall, but for all server hostings.
                     .menu
-                        p.name SecuredNetwork
                         .button-box
                             .button
-                                a(href=securednetwork.page, target="_blank", rel="noreferrer")
+                                a(href=securednetwork.page, target="_blank" rel="noreferrer")
                                     | Project page
-                                    span.icon
-                                        img(src="graphics/icon/foreign.png", alt="")
+                                    <i class="bi bi-box-arrow-up-right"></i>
                             .button
-                                a(href=securednetwork.docs, target="_blank", rel="noreferrer")
+                                a(href=securednetwork.docs, target="_blank" rel="noreferrer")
                                     | Documentation
-                                    span.icon
-                                        img(src="graphics/icon/open-book.png", alt="")
+                                    <i class="bi bi-journal-text"></i>
                             .button
-                                a(href=securednetwork.download, target="_blank", rel="noreferrer")
+                                a(href=securednetwork.download, target="_blank" rel="noreferrer")
                                     | Download
-                                    span.icon
-                                        img(src="graphics/icon/download.png", alt="")
+                                    <i class="bi bi-download"></i>
                 .project.item
-                    img(src="graphics/icon/clicks-per-second.png", alt="").icon
-                    .gradient
+                    .info
+                        img(src="graphics/icon/clicks-per-second.png" alt="").icon
+                        h1.name ClicksPerSecond
+                        p.description Lightweight and efficient solution to CPS measurement for your playerbase. Drag'n'drop, no mods required.
                     .menu
-                        p.name ClicksPerSecond
                         .button-box
                             .button
-                                a(href=clickspersecond.page target="_blank", rel="noreferrer")
+                                a(href=clickspersecond.page target="_blank" rel="noreferrer")
                                     | Project page
-                                    span.icon
-                                        img(src="graphics/icon/foreign.png", alt="")
+                                    <i class="bi bi-box-arrow-up-right"></i>
                             .button
-                                a(href=clickspersecond.docs target="_blank", rel="noreferrer")
+                                a(href=clickspersecond.docs target="_blank" rel="noreferrer")
                                     | Documentation
-                                    span.icon
-                                        img(src="graphics/icon/open-book.png", alt="")
+                                    <i class="bi bi-journal-text"></i>
                             .button
-                                a(href=clickspersecond.download target="_blank", rel="noreferrer")
+                                a(href=clickspersecond.download target="_blank" rel="noreferrer")
                                     | Download
-                                    span.icon
-                                        img(src="graphics/icon/download.png", alt="")
+                                    <i class="bi bi-download"></i>
                 .project.item
-                    img(src="graphics/icon/repair-item.png", alt="").icon
-                    .gradient
+                    .info
+                        img(src="graphics/icon/repair-item.png" alt="").icon
+                        h1.name RepairItem
+                        p.description Yet another drag'n'drop simple item repairer. Designed for survival-type and RPG servers.
                     .menu
-                        p.name RepairItem
                         .button-box
                             .button
-                                a(href=repairitem.page target="_blank", rel="noreferrer")
+                                a(href=repairitem.page target="_blank" rel="noreferrer")
                                     | Project page
-                                    span.icon
-                                        img(src="graphics/icon/foreign.png", alt="")
+                                    <i class="bi bi-box-arrow-up-right"></i>
                             .button
-                                a(href=repairitem.docs target="_blank", rel="noreferrer")
+                                a(href=repairitem.docs target="_blank" rel="noreferrer")
                                     | Documentation
-                                    span.icon
-                                        img(src="graphics/icon/open-book.png", alt="")
+                                    <i class="bi bi-journal-text"></i>
                             .button
-                                a(href=repairitem.download target="_blank", rel="noreferrer")
+                                a(href=repairitem.download target="_blank" rel="noreferrer")
                                     | Download
-                                    span.icon
-                                        img(src="graphics/icon/download.png", alt="")
-        .section.dark(id="services")
-            //div.wave-divider.dark
+                                    <i class="bi bi-download"></i>
+                .project.item
+                    .info
+                        img(src="graphics/icon/yaml-updater.png" alt="").icon
+                        h1.name BoostedYAML
+                        p.description Delivers boosted experience with YAML files to developers and server owners. Feature packed, yet easy to use.
+                    .menu
+                        .button-box
+                            .button
+                                a(href=repairitem.page target="_blank" rel="noreferrer")
+                                    | Project page
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                            .button
+                                a(href=repairitem.docs target="_blank" rel="noreferrer")
+                                    | Documentation
+                                    <i class="bi bi-journal-text"></i>
+                            .button
+                                a(href=repairitem.download target="_blank" rel="noreferrer")
+                                    | Download
+                                    <i class="bi bi-download"></i>
+        .section(id="services")
             .title-box
                 h1.title Services
+                div.subtitle
+                    p What can I do for you to make you and your fanbase satisfied.
             .text-box.services
                 .service.item
-                    .icon
-                        img(src="graphics/icon/minecraft.svg", alt="")
-                    .description
-                        p.category Minecraft plugin development
-                        p.description Does not matter what you need - a new plugin, server core or just update of a plugin to the newest version. With years of experience, I've got you covered.
+                    img(src="graphics/icon/minecraft.svg", alt="").icon
+                    h1.name Minecraft plugin development
+                    p.description Does not matter what you need - a new plugin, server core or just update of a plugin to the newest version. With years of experience, I've got you covered.
+                .service.item.discord
+                    img(src="graphics/icon/discord-color.svg", alt="").icon
+                    h1.name Discord bot development
+                    p.description Want to add some bot to your Discord server to make people entertained? Or just some utility one? No problem.
                 .service.item
-                    .icon
-                        img(src="graphics/icon/discord-color.svg", alt="")
-                    .description
-                        p.category Discord bot development
-                        p.description Want to add some bot to your Discord server to make people entertained? Or just some utility one? No problem.
-                .service.item
-                    .icon
-                        img(src="graphics/icon/web.svg", alt="")
-                    .description
-                        p.category Backend web development
-                        p.description If you need an API for your web application, I can make one for you.
+                    img(src="graphics/icon/web.svg", alt="").icon
+                    h1.name Backend web development
+                    p.description If you need an API for your web application, I can make one for you.
 
-        .section(id="statistics")
-            //div.wave-divider.light
+        .section(id="testimonals")
             .title-box
-                h1.title Statistics
-            .text-box.statistics#stats-box
-                .statistic
-                    p.name  Plugin downloads:
-                    p.stats-value.value(data-to-value=plugin_downloads) 0
-                .statistic
-                    p.name Projects:
-                    p.stats-value.value(data-to-value=projects) 0
-                .statistic
-                    p.name Average stars in reviews:
-                    p.stats-value.value(data-to-value=average_stars) 0
+                h1.title Testimonals
+                div.subtitle
+                    p Proof of my work and attitude to customers from all over the world.
+                    p Average stars: #{average_stars}/5 #[i.bi.bi-star-fill(style="color: gold")]
+            .text-box.testimonals
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        div.w-100.review
+                            p "The best whitelist plugin, EZ to setup and support is blazing fast! ..."
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>- Zugirf</h5>
+                          <p>Review for plugin SecuredNetwork.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        div.w-100.review
+                            p "So glad I found this plugin, it works efficiently and flawlessly! Support and enthusiasm from the plugins creator is outstanding. ..."
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>- SpigotMC user</h5>
+                          <p>Review for plugin RepairItem.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        div.w-100.review
+                            p "The support on discord is outstanding thanks to David and the plugin works flawlessly."
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>- SpigotMC user</h5>
+                          <p>Review for plugin SecuredNetwork.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        div.w-100.review
+                            p "Oh!!! This is the best plugin for protect your server! ... The owner offered me an incredible support, free and with some information that is useful. ..."
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>- CayeOficial</h5>
+                          <p>Review for plugin SecuredNetwork.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        div.w-100.review
+                            p "... The Support is incredible, when reporting a bug it was fixed within the course of an hour. 10/10 Would Recommend."
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>- SpigotMC user</h5>
+                          <p>Review for plugin SecuredNetwork.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
 
-        .section.dark(id="contact")
+        .section(id="contact")
             //div.wave-divider.light
             .title-box
                 h1.title Contact
+                div.subtitle
+                    p Would you like me to craft you something? Or, just want to talk?
             .text-box.contacts
                 .contact
                     .icon
-                        img(src="graphics/icon/water-tap.svg", alt="")
+                        img(src="graphics/icon/water-tap.svg" alt="")
                     .description
                         p.name SpigotMC
-                        a.link(href="https://www.spigotmc.org/members/387302/", target="_blank", rel="noreferrer") @dejvokep
+                        a.link(href="https://www.spigotmc.org/members/387302/" target="_blank" rel="noreferrer") @dejvokep
                 .contact
                     .icon
-                        img(src="graphics/icon/gmail.svg", alt="")
+                        img(src="graphics/icon/gmail.svg" alt="")
                     .description
                         p.name Email
-                        a.link(href="mailto:davidcubesvkdev@gmail.com?subject=Hello :)", target="_blank", rel="noreferrer") davidcubesvkdev@gmail.com
+                        a.link(href="mailto:davidcubesvkdev@gmail.com?subject=Hello :)" target="_blank" rel="noreferrer") davidcubesvkdev@gmail.com
                 .contact
                     .icon
-                        img(src="graphics/icon/discord-color.svg", alt="")
+                        img(src="graphics/icon/discord-color.svg" alt="")
                     .description
                         p.name Discord
-                        a.link(href="https://discord.com/users/526015605338275840", target="_blank", rel="noreferrer") dejvokep#1234
+                        a.link(href="https://discord.com/users/526015605338275840" target="_blank" rel="noreferrer") dejvokep#1234, #[a.link(href="https://discord.gg/BbhADEy" target="_blank" rel="noreferrer") server]
                 .contact
                     .icon
-                        img(src="graphics/icon/discord-color.svg", alt="")
+                        img(src="graphics/icon/GitHub-Mark-64px.png" alt="")
                     .description
-                        p.name Discord server
-                        a.link(href="https://discord.gg/BbhADEy", target="_blank", rel="noreferrer") BbhADEy
-        footer
-            .footer
-                .web-title
-                    .logo
-                    .title
-                        h1 DEJVOKEP
-                .text
-                    p.
-                        #[strong Privacy statement:] no personal information are collected.
-    script(src="script/home/typewriter copy.js")
+                        p.name GitHub
+                        a.link(href="https://github.com/dejvokep" target="_blank" rel="noreferrer") @dejvokep
+    footer
+        .footer
+            .web-title
+                .logo
+                .title
+                    h1 DEJVOKEP
+            .text
+                p.
+                    #[strong Privacy statement:] no personal information are collected.
+    script(src="script/home/typewriter2.js")
     script(src="script/home/time-passed.js")
-    script(src="script/home/scroll-reveal.js", type="module")
+    script(src="script/home/scroll-reveal.js" type="module")
     script(src="script/home/animations.js" type="module")
     script(src="script/home/font-size.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js")
     script(src=src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js")
     script(src="script/home/vantajs-init.js")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous")

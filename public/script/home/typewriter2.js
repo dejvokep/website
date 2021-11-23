@@ -29,11 +29,11 @@ function change() {
     // Wait
     setTimeout(function() {
         // Change box width
-        box.style.width = text.getBoundingClientRect().width;
+        box.style.width = text.getBoundingClientRect().width + "px";
         // Change to next message
         nextMessage();
         // Change box width
-        box.style.width = text.getBoundingClientRect().width;
+        box.style.width = text.getBoundingClientRect().width + "px";
         // Wait
         setTimeout(function() {
             // Make visible
