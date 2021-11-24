@@ -16,18 +16,21 @@ html(lang="en")
                         h1 DEJVOKEP
                 .mobile-menu-mask
                 .option-box
-                    .menu-back-button
-                        img(src="graphics/icon/back.svg" alt="")
+                    .mobile-menu-back-button
+                        p
+                            i.bi.bi-arrow-right-circle
                     .options
-                        a.option(href="#top" rel="noreferrer") Home
+                        a.option(href="#home" rel="noreferrer") Home
                         a.option(href="#about-me" rel="noreferrer") About
                         a.option(href="#software" rel="noreferrer") Software
                         a.option(href="#services" rel="noreferrer") Services
                         a.option(href="#testimonals" rel="noreferrer") Testimonals
                         a.option(href="#contact" rel="noreferrer") Contact
-                .menu-button
+                .mobile-menu-button
+                    p
+                        i.bi.bi-list
         #background
-        .banner(id="top")
+        .banner(id="home")
             .container
                 .title
                     p.responsive-text(data-min-width=400, data-min-size=35, data-max-width=2500, data-max-size=100)
@@ -44,6 +47,9 @@ html(lang="en")
                         a(href="https://discord.gg/BbhADEy" target="_blank" rel="noreferrer")
                             | Hire me
                             i.bi.bi-envelope-plus
+            .scroll-down
+                p
+                    a(href="#about-me" rel="noreferrer") #[i.bi.bi-arrow-down] Scroll down #[i.bi.bi-arrow-down]
             //a(href="#about-me")
             //    .scroll.button-hover
             //        .icon-right.icon
@@ -73,26 +79,8 @@ html(lang="en")
                             .fill
                     .experience
                         .description
-                            p.name JavaScript
-                                span.time(data-current-time=time, data-from-time=1569794400000) 1 year
-                        .bar
-                            .fill
-                    .experience
-                        .description
-                            p.name HTML, CSS, Sass
-                                span.time(data-current-time=time, data-from-time=1564524000000) 2 years
-                        .bar
-                            .fill
-                    .experience
-                        .description
-                            p.name SQL (Structured Query Language)
-                                span.time(data-current-time=time, data-from-time=1543532400000) 2 years
-                        .bar
-                            .fill
-                    .experience
-                        .description
-                            p.name Redis
-                                span.time(data-current-time=time, data-from-time=1596146400000) 1 year
+                            p.name Spigot and BungeeCord API
+                                span.time(data-current-time=time, data-from-time=1522447200000) 3 years
                         .bar
                             .fill
                     .experience
@@ -103,26 +91,44 @@ html(lang="en")
                             .fill
                     .experience
                         .description
-                            p.name GIT and version control
+                            p.name SQL (Structured Query Language)
+                                span.time(data-current-time=time, data-from-time=1543532400000) 2 years
+                        .bar
+                            .fill
+                    .experience
+                        .description
+                            p.name HTML, CSS, Sass
                                 span.time(data-current-time=time, data-from-time=1564524000000) 2 years
-                        .bar
-                            .fill
-                    .experience
-                        .description
-                            p.name Node.js
-                                span.time(data-current-time=time, data-from-time=1619733600000) 6 months
-                        .bar
-                            .fill
-                    .experience
-                        .description
-                            p.name Spigot and BungeeCord API
-                                span.time(data-current-time=time, data-from-time=1522447200000) 3 years
                         .bar
                             .fill
                     .experience
                         .description
                             p.name JDA (Java Discord API)
                                 span.time(data-current-time=time, data-from-time=1564524000000) 2 years
+                        .bar
+                            .fill
+                    .experience
+                        .description
+                            p.name GIT and version control
+                                span.time(data-current-time=time, data-from-time=1564524000000) 2 years
+                        .bar
+                            .fill
+                    .experience
+                        .description
+                            p.name JavaScript
+                                span.time(data-current-time=time, data-from-time=1569794400000) 1 year
+                        .bar
+                            .fill
+                    .experience
+                        .description
+                            p.name Redis
+                                span.time(data-current-time=time, data-from-time=1596146400000) 1 year
+                        .bar
+                            .fill
+                    .experience
+                        .description
+                            p.name Node.js
+                                span.time(data-current-time=time, data-from-time=1619733600000) 6 months
                         .bar
                             .fill
 
@@ -233,7 +239,7 @@ html(lang="en")
             .title-box
                 h1.title Testimonals
                 div.subtitle
-                    p Proof of my work and attitude to customers from all over the world.
+                    p Proof of my work and outstanding attitude to customers from all over the world.
                     p Average stars: #{average_stars}/5 #[i.bi.bi-star-fill(style="color: gold")]
             .text-box.testimonals
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -247,7 +253,7 @@ html(lang="en")
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         div.w-100.review
-                            p "The best whitelist plugin, EZ to setup and support is blazing fast! ..."
+                            h1.responsive-text(data-min-width=400, data-min-size=20, data-max-width=1700, data-max-size=40) "The best whitelist plugin, EZ to setup and support is blazing fast! ..."
                         <div class="carousel-caption d-none d-md-block">
                           <h5>- Zugirf</h5>
                           <p>Review for plugin SecuredNetwork.</p>
@@ -255,7 +261,7 @@ html(lang="en")
                       </div>
                       <div class="carousel-item">
                         div.w-100.review
-                            p "So glad I found this plugin, it works efficiently and flawlessly! Support and enthusiasm from the plugins creator is outstanding. ..."
+                            h1.responsive-text(data-min-width=400, data-min-size=20, data-max-width=1700, data-max-size=40) "So glad I found this plugin, it works efficiently and flawlessly! Support and enthusiasm from the plugins creator is outstanding. ..."
                         <div class="carousel-caption d-none d-md-block">
                           <h5>- SpigotMC user</h5>
                           <p>Review for plugin RepairItem.</p>
@@ -263,7 +269,7 @@ html(lang="en")
                       </div>
                       <div class="carousel-item">
                         div.w-100.review
-                            p "The support on discord is outstanding thanks to David and the plugin works flawlessly."
+                            h1.responsive-text(data-min-width=400, data-min-size=20, data-max-width=1700, data-max-size=40) "The support on discord is outstanding thanks to David and the plugin works flawlessly."
                         <div class="carousel-caption d-none d-md-block">
                           <h5>- SpigotMC user</h5>
                           <p>Review for plugin SecuredNetwork.</p>
@@ -271,7 +277,7 @@ html(lang="en")
                       </div>
                       <div class="carousel-item">
                         div.w-100.review
-                            p "Oh!!! This is the best plugin for protect your server! ... The owner offered me an incredible support, free and with some information that is useful. ..."
+                            h1.responsive-text(data-min-width=400, data-min-size=20, data-max-width=1700, data-max-size=40) "Oh!!! This is the best plugin for protect your server! ... The owner offered me an incredible support, free and with some information that is useful. ..."
                         <div class="carousel-caption d-none d-md-block">
                           <h5>- CayeOficial</h5>
                           <p>Review for plugin SecuredNetwork.</p>
@@ -279,7 +285,7 @@ html(lang="en")
                       </div>
                       <div class="carousel-item">
                         div.w-100.review
-                            p "... The Support is incredible, when reporting a bug it was fixed within the course of an hour. 10/10 Would Recommend."
+                            h1.responsive-text(data-min-width=400, data-min-size=20, data-max-width=1700, data-max-size=40) "... The Support is incredible, when reporting a bug it was fixed within the course of an hour. 10/10 Would Recommend."
                         <div class="carousel-caption d-none d-md-block">
                           <h5>- SpigotMC user</h5>
                           <p>Review for plugin SecuredNetwork.</p>
@@ -335,8 +341,8 @@ html(lang="en")
                     h1 DEJVOKEP
             .text
                 p.
-                    #[strong Privacy statement:] no personal information are collected.
-    script(src="script/home/typewriter2.js")
+                    #[strong Privacy statement:] no personal information is collected.
+                    (c) dejvokep 2021
     script(src="script/home/time-passed.js")
     script(src="script/home/scroll-reveal.js" type="module")
     script(src="script/home/animations.js" type="module")

@@ -32,8 +32,8 @@ addElement(statsBox.firstChild, function () {
 const menu = document.getElementById("menu");
 
 const optionBox = menu.getElementsByClassName("option-box")[0];
-const menuButton = menu.getElementsByClassName("menu-button")[0];
-const menuCloseButton = menu.getElementsByClassName("menu-back-button")[0];
+const menuButton = menu.getElementsByClassName("mobile-menu-button")[0];
+const menuCloseButton = menu.getElementsByClassName("mobile-menu-back-button")[0];
 const mobileMenuMask = document.getElementsByClassName("mobile-menu-mask")[0];
 
 const options = menu.getElementsByClassName("option");
