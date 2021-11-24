@@ -224,15 +224,18 @@ div.banner {
     div.scroll-down {
         position: absolute;
         bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 100%;
         animation: floating-y 5s infinite;
-        a {
-            color: white;
-            font-weight: 500;
-            font-family: $primary-font-family;
-            font-size: 20px;
-            transition: color .5s;
+
+        p {
+            text-align: center;
+            a {
+                color: white;
+                font-weight: 500;
+                font-family: $primary-font-family;
+                font-size: 20px;
+                transition: color .5s;
+            }
         }
 
         &:hover {
@@ -240,6 +243,7 @@ div.banner {
                 color: lightgray;
             }
         }
+        
     }
 }
 
@@ -924,10 +928,10 @@ footer {
 
     from,
     to {
-        transform: translate(-50%, -10px);
+        transform: translateY(-10px);
     }
 
     50% {
-        transform: translate(-50%, 10px);
+        transform: translateY(10px);
     }
 }
