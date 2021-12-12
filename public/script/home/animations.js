@@ -1,5 +1,4 @@
 import { addElement } from "./scroll-reveal.js";
-import { animate } from "./integer-animation.js";
 
 // Experience box
 const experienceBox = document.getElementById("experience-box");
@@ -15,41 +14,35 @@ addElement(experienceBox.firstChild, function () {
         fills[i].style.width = times[i].getAttribute("data-fill-to");
     }
 });
-/*
-// Stats box
-const statsBox = document.getElementById("stats-box");
-// Add element
-addElement(statsBox.firstChild, function () {
-    // Stats values
-    const statsValues = document.getElementsByClassName("stats-value");
-    // Loop
-    for (let i = 0; i < statsValues.length; i++) {
-        // Animate
-        animate(statsValues[i], 0, parseInt(statsValues[i].getAttribute("data-to-value"))+1, 1000);
-    }
-});*/
 
+// Menu
 const menu = document.getElementById("menu");
-
+// Options and other elements
 const optionBox = menu.getElementsByClassName("option-box")[0];
 const menuButton = menu.getElementsByClassName("mobile-menu-button")[0];
 const menuCloseButton = menu.getElementsByClassName("mobile-menu-back-button")[0];
 const mobileMenuMask = document.getElementsByClassName("mobile-menu-mask")[0];
-
 const options = menu.getElementsByClassName("option");
-const backToTop = document.getElementById("back-to-top");
-const windowHeight = window.innerHeight;
-const windowWidth = "200px";
+// Currently acitve option
 let activeOption = undefined
+// Scroll timer
 let timer = null;
+
+// Window height
+const windowHeight = window.innerHeight;
+
+// Run initially
 resetMenuOptions();
 changeScrollMenu();
+
+// Scroll handler
 window.addEventListener("scroll", function() {
     this.window.clearTimeout(timer)
     timer = setTimeout(resetMenuOptions, 75)
     changeScrollMenu();
 });
 
+// Toggles bnetween desktop and mobile menu according to the scroll position
 function changeScrollMenu() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 
@@ -60,22 +53,24 @@ function changeScrollMenu() {
     }
 }
 
+// Menu togglers
 mobileMenuMask.addEventListener("click", function() {
     toggleMenu();
 });
 menuButton.addEventListener("click", function() {
     toggleMenu();
 });
-
 menuCloseButton.addEventListener("click", function() {
     toggleMenu();
 });
 
+// Toggles between desktop and mobile menu
 function toggleMenu() {
     optionBox.classList.toggle("open");
     mobileMenuMask.classList.toggle("shown");
 }
 
+// Resets active menu options
 function resetMenuOptions() {
     // Scroll index
     const scrollIndex = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0) + windowHeight * 0.4;
@@ -94,6 +89,7 @@ function resetMenuOptions() {
     activeOption.classList.toggle("active")
 }
 
+// Finds nearest applicable element for the current scroll position
 function findNearest(scrollIndex) {
     // Loop from the end
     for (let index = options.length - 1; index >= 0; index--) {

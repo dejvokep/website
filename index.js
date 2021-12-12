@@ -20,9 +20,9 @@ app.get("/", (req, res) => {
     res.render("home", 
     {
         time: Date.now(),
-        plugin_downloads: data.getPluginDownloads(), 
-        projects: data.getProjects(), 
-        average_stars: data.getAverageStars(), 
+        plugin_downloads: data.getPluginDownloads(),
+        projects: data.getProjects(),
+        average_stars: data.getAverageStars(),
         repairitem: {
             download: data.getDownloadURL(55890),
             page: data.getPageURL(55890),
